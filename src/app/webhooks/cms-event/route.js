@@ -2,6 +2,7 @@ import { CACHE_TAG_REVIEWS } from "@/src/utils/blogUtils";
 import { revalidateTag } from "next/cache";
 
 export default async function handler(req, res) {
+  console.log('Received method:', req.method);
   try {
     const payload = await req.json();
     // You can add conditions here to check for specific events in the payload
