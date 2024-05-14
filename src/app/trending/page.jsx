@@ -4,6 +4,18 @@ import Link from "next/link";
 import "@/public/scss/news.scss";
 import PostCard from "@/src/component/PostCard";
 
+export const metadata = {
+  title: "Trending crypto news | Enlight News",
+  description:
+    "Discover the hottest crypto news. The Enlight News team thoroughly selects your most valuable and discussed news.",
+  openGraph: {
+    title: "Trending crypto news | Enlight News",
+    description:
+      "Discover the hottest crypto news. The Enlight News team thoroughly selects your most valuable and discussed news.",
+    images: "https://enlight.systems/images/meta.png",
+  },
+};
+
 function parsePageParams(paramValue) {
   if (paramValue) {
     const page = parseInt(paramValue);

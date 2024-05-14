@@ -8,13 +8,13 @@ import AboutThird from "./_components/AboutThird";
 import SubscribeBlock from "@/src/component/SubscribeBlock";
 
 export const metadata = {
-  title: "About Us",
+  title: "About us | Enlight News",
   description:
-    "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
+    "Enlight News strives to deliver unbiased, informative news, analysis, research, and education for the crypto community. It is your go-to source of crypto news.",
   openGraph: {
-    title: "About Us",
+    title: "About us | Enlight News",
     description:
-      "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
+      "Enlight News strives to deliver unbiased, informative news, analysis, research, and education for the crypto community. It is your go-to source of crypto news.",
     images: "https://enlight.systems/images/meta.png",
   },
 };

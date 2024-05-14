@@ -4,6 +4,18 @@ import Link from "next/link";
 import "@/public/scss/news.scss";
 import PostCard from "@/src/component/PostCard";
 
+export const metadata = {
+  title: "Bitcoin news | Enlight News",
+  description:
+    "Explore the latest Bitcoin news, including price shifts, events, and changes impacting the cryptocurrency. We analyse market sentiment for you.",
+  openGraph: {
+    title: "Bitcoin news | Enlight News",
+    description:
+      "Explore the latest Bitcoin news, including price shifts, events, and changes impacting the cryptocurrency. We analyse market sentiment for you.",
+    images: "https://enlight.systems/images/meta.png",
+  },
+};
+
 function parsePageParams(paramValue) {
   if (paramValue) {
     const page = parseInt(paramValue);
