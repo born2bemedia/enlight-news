@@ -23,7 +23,7 @@ export async function POST(request) {
 
     // Set up email data
     const mailOptions = {
-      from: '"Enlight Systems" <noreply@enlight.systems>', // Sender address
+      from: '"Enlight News" <noreply@enlight.systems>', // Sender address
       to: "noreply@enlight.systems", // Change to your recipient's email
       subject: "New Subscription",
       text: `Email: ${email}`,

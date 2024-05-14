@@ -124,39 +124,43 @@ a {
     @media (max-width: 992px) {
       flex-direction: column;
     }
-    > a {
+    > div {
       width: calc(33.33% - 20px);
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
+
       @media (max-width: 992px) {
         width: 100%;
       }
-      .post-thumb {
+      > a {
         width: 100%;
-        height: 240px;
-        background-position: center;
-        background-size: cover;
-        border-radius: 16px;
-      }
-      .post-inner {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        h3 {
-          margin: 0;
-          font-size: 24px;
-          font-weight: 500;
-          line-height: 1.2;
-          text-align: left;
-          color: #0f0f0f;
+        gap: 24px;
+        .post-thumb {
+          width: 100%;
+          height: 240px;
+          background-position: center;
+          background-size: cover;
+          border-radius: 16px;
         }
-        span {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 1.2;
-          text-align: left;
-          color: rgb(15 15 15 / 50%);
+        .post-inner {
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          h3 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 1.2;
+            text-align: left;
+            color: #0f0f0f;
+          }
+          span {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            text-align: left;
+            color: rgb(15 15 15 / 50%);
+          }
         }
       }
     }
@@ -370,6 +374,29 @@ a {
       > div {
         width: calc(50% - 16px);
         position: relative;
+        &.full {
+          width: 100%;
+          textarea {
+            width: 100%;
+            height: 100px;
+            background: #2a2a2a1a;
+            border: 1px solid #2a2a2a1a;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            color: #2a2a2a;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            border-radius: 0;
+            font-family: "__Epilogue_f72d86", "__Epilogue_Fallback_f72d86";
+            font-style: normal;
+            &.invalid {
+              border-color: #f00;
+            }
+          }
+        }
         @media (max-width: 992px) {
           width: 100%;
         }
@@ -727,10 +754,10 @@ button {
     @media (max-width: 992px) {
       max-width: 100%;
     }
-    .status-message{
-        color: #f0f0f7;
-        font-size: 14px;
-        margin-top: 16px;
+    .status-message {
+      color: #f0f0f7;
+      font-size: 14px;
+      margin-top: 16px;
     }
     .form-row {
       display: flex;

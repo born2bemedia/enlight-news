@@ -8,7 +8,7 @@ export default function FormPopup({ closePopup, solutionTitle }) {
 
   const handleFormReset = () => {
     setFormSent(!formSent);
-  }
+  };
 
   return (
     <div className="popup">
@@ -31,7 +31,7 @@ export default function FormPopup({ closePopup, solutionTitle }) {
           />
         </svg>
         {!formSent ? (
-          <GetForm popupTitleContent={solutionTitle} handleFormReset = { () => handleFormReset() }/>
+          <GetForm handleFormReset={() => handleFormReset()} />
         ) : (
           <div className="form-sent">
             <svg
@@ -46,8 +46,11 @@ export default function FormPopup({ closePopup, solutionTitle }) {
                 fill="#97D80F"
               />
             </svg>
-            <h2>Your request has been <br/>successfully submitted.</h2>
-            <p>Our team will review it shortly. Thank you for choosing Enlight.</p>
+            <h2>
+              Thank you <br />
+              for your news suggestion!
+            </h2>
+            <p>Our team will review it shortly.</p>
           </div>
         )}
       </div>

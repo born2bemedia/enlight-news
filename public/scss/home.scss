@@ -29,6 +29,9 @@
     @media (max-width: 992px) {
       width: 100%;
     }
+    >div{
+      height: 100%;
+    }
     .featured-post {
       display: flex;
       height: 100%;
@@ -210,3 +213,57 @@
 }
 
 
+.home-submit{
+  margin: 150px 0 0 0;
+  @media (max-width:992px){
+      margin: 80px 0 0 0;
+      ._container{
+          padding: 0;
+      }
+  }
+  &__body{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 135px 16px;
+      border-radius: 0 0 24px 24px;
+      overflow: hidden;
+      background-image: url(/images/single-service/service-last.webp);
+      background-position: top center;
+      background-size: cover;
+      @media (max-width:992px){
+          padding: 100px 16px 125px 16px;
+      }
+      h2{
+          color: #F0F0F7;
+          text-align: center;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 120%;
+          margin: 0 0 20px 0;
+          @media (max-width:992px){
+              font-size: 32px;
+              br{
+                  display: none;
+              }
+          }
+      }
+      p{
+        color: #F0F0F7;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0 0 80px 0;
+        @media (max-width:992px){
+            margin: 0 0 64px 0;
+            font-size: 16px;
+            br{
+                display: none;
+            }
+        }
+    }
+  }
+}

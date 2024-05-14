@@ -1,6 +1,7 @@
 import React from "react";
 import { getPosts } from "@/src/utils/blogUtils";
 import Link from "next/link";
+import PostCard from "./PostCard";
 
 async function CategoryPosts({ categoryTitle, category }) {
   const categoryPosts = await getPosts(1, 3, category, 0);
@@ -31,16 +32,7 @@ async function CategoryPosts({ categoryTitle, category }) {
         </div>
         <div className="category-wrap__body">
           {categoryPosts.map((post) => (
-            <Link href={`/news/${post.slug}`} className="featured-post" key={post.slug}>
-              <div
-                className="post-thumb"
-                style={{ backgroundImage: `url(${post.image})` }}
-              ></div>
-              <div className="post-inner">
-                <h3>{post.title}</h3>
-                <span>{post.format_date}</span>
-              </div>
-            </Link>
+            <PostCard key={post.slug} postObject={post} />
           ))}
         </div>
       </div>

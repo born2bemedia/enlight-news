@@ -2,6 +2,7 @@ import React from "react";
 import { getPosts, getPageCount } from "@/src/utils/blogUtils";
 import Link from "next/link";
 import "@/public/scss/news.scss";
+import PostCard from "@/src/component/PostCard";
 
 function parsePageParams(paramValue) {
   if (paramValue) {
@@ -34,20 +35,7 @@ async function TrendingPage({ searchParams }) {
           </div>
           <div className="news-wrap__body">
             {posts.map((post) => (
-              <Link
-                href={`/news/${post.slug}`}
-                className="featured-post"
-                key={post.slug}
-              >
-                <div
-                  className="post-thumb"
-                  style={{ backgroundImage: `url(${post.image})` }}
-                ></div>
-                <div className="post-inner">
-                  <h3>{post.title}</h3>
-                  <span>{post.format_date}</span>
-                </div>
-              </Link>
+              <PostCard key={post.slug} postObject={post} />
             ))}
           </div>
           {pageCount > 1 && (

@@ -13,32 +13,9 @@ const ValidationSchema = Yup.object().shape({
   email: Yup.string()
     .email("Please provide a valid email address.")
     .required("This field is required."),
-  phone: Yup.string()
-    .required("This field is required.")
-    .test("is-valid-phone", "Please provide a valid phone number.", (value) => {
-      // Implement a more robust check for phone numbers here if necessary
-      return /^[+]?[(]?[0-9]{3}[)]?[-\s.]?[0-9]{3}[-\s.]?[0-9]{4,6}$/im.test(
-        value
-      );
-    }),
-  projectType: Yup.string().required("This field is required."),
-  projectDescription: Yup.string().required("This field is required."),
-  currentChallenges: Yup.string().required("This field is required."),
+  newsTopic: Yup.string().required("This field is required."),
+  sources: Yup.string().required("This field is required."),
 });
-
-const projectTypeOptions = [
-  { value: "", label: "Project type" },
-  { value: "Cryptocurrency Exchanges", label: "Cryptocurrency Exchanges" },
-  { value: "Blockchain Platforms", label: "Blockchain Platforms" },
-  { value: "Payment Solutions", label: "Payment Solutions" },
-  { value: "Token Offerings", label: "Token Offerings" },
-  {
-    value: "Decentralised Finance (DeFi)",
-    label: "Decentralised Finance (DeFi)",
-  },
-  { value: "Coin Marketplaces", label: "Coin Marketplaces" },
-  { value: "Other", label: "Other" },
-];
 
 const handleSubmit = async (
   values,
@@ -66,31 +43,15 @@ const handleSubmit = async (
 };
 
 function GetForm({ handleFormReset, popupTitleContent = "", subtitle }) {
-  const [country, setCountry] = useState("gb");
-
-  useEffect(() => {
-    axios
-      .get("https://ipapi.co/json/")
-      .then((response) => {
-        const countryCode = response.data.country_calling_code.replace("+", "");
-        setCountry(countryCode.toLowerCase());
-      })
-      .catch((error) => {
-        console.error("Error fetching IP data", error);
-      });
-  }, []);
-
   return (
     <div>
       <Formik
         initialValues={{
-          solution: popupTitleContent,
           name: "",
           email: "",
-          phone: "",
-          projectType: "",
-          projectDescription: "",
-          currentChallenges: "",
+          newsTopic: "",
+          sources: "",
+          additionalComments: "",
         }}
         validationSchema={ValidationSchema}
         onSubmit={(values, { setSubmitting, resetForm, setStatus }) => {
@@ -112,12 +73,11 @@ function GetForm({ handleFormReset, popupTitleContent = "", subtitle }) {
             {popupTitleContent ? (
               <h2>{popupTitleContent}</h2>
             ) : (
-              <h2>Get started now!</h2>
+              <h2>Submit News Topic </h2>
             )}
             {subtitle ? <p className="subtitle">{subtitle}</p> : ""}
 
             <Form className="popup-form">
-              <Field type="hidden" name="solution" />
               <div className="input-wrap">
                 <Field
                   name="name"
@@ -138,66 +98,43 @@ function GetForm({ handleFormReset, popupTitleContent = "", subtitle }) {
               </div>
 
               <div className="input-wrap">
-                <PhoneInput
-                  country={country}
-                  value=""
-                  onChange={(value) => setFieldValue("phone", value)}
-                  placeholder="Your phone"
-                  className={touched.phone && errors.phone ? "invalid" : ""}
-                />
-                <ErrorMessage name="phone" component="span" />
-              </div>
-
-              <div className="input-wrap">
-                <Select
-                  options={projectTypeOptions}
-                  classNamePrefix={
-                    touched.projectType && errors.projectType
-                      ? "invalid select"
-                      : "select"
+                <Field
+                  name="newsTopic"
+                  placeholder="News topic"
+                  className={
+                    touched.newsTopic && errors.newsTopic ? "invalid" : ""
                   }
-                  onChange={(option) =>
-                    setFieldValue("projectType", option.value)
-                  }
-                  onBlur={() => setFieldTouched("projectType", true)}
-                  value={projectTypeOptions.find(
-                    (option) => option.value === values.projectType
-                  )}
-                  placeholder="Project type"
                 />
-                <ErrorMessage name="projectType" component="span" />
+                <ErrorMessage name="newsTopic" component="span" />
               </div>
 
               <div className="input-wrap">
                 <Field
-                  name="projectDescription"
-                  placeholder="Project description"
-                  className={
-                    touched.projectDescription && errors.projectDescription
-                      ? "invalid"
-                      : ""
-                  }
+                  name="sources"
+                  placeholder="Sources"
+                  className={touched.sources && errors.sources ? "invalid" : ""}
                 />
-                <ErrorMessage name="projectDescription" component="span" />
+                <ErrorMessage name="sources" component="span" />
               </div>
 
-              <div className="input-wrap">
+              <div className="input-wrap full">
                 <Field
-                  name="currentChallenges"
-                  placeholder="Current marketing challenges"
+                  as="textarea"
+                  name="additionalComments"
+                  placeholder="Additional comments:"
                   className={
-                    touched.currentChallenges && errors.currentChallenges
+                    touched.additionalComments && errors.additionalComments
                       ? "invalid"
                       : ""
                   }
                 />
-                <ErrorMessage name="currentChallenges" component="span" />
+                <ErrorMessage name="additionalComments" component="span" />
               </div>
 
               <button type="submit" disabled={isSubmitting}>
                 <span className="main-button">
                   <span>
-                    Send Request
+                    Submit
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -213,11 +150,6 @@ function GetForm({ handleFormReset, popupTitleContent = "", subtitle }) {
                   </span>
                 </span>
               </button>
-              <p className="terms">
-                By proceeding, you agree to the{" "}
-                <Link href="/terms-of-service">Terms of Service</Link> and{" "}
-                <Link href="/privacy-policy">Privacy Policy</Link>.
-              </p>
             </Form>
           </>
         )}

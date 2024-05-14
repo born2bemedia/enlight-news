@@ -1,6 +1,8 @@
 import { getPosts } from "@/src/utils/blogUtils";
 import Link from "next/link";
 import React from "react";
+import FeaturedPostCard from "../FeaturedPostCard";
+import LatestPostCard from "../LatestPostCard";
 
 async function HomeFirst() {
   const lastPosts = await getPosts(1, 1, "", 0);
@@ -11,28 +13,13 @@ async function HomeFirst() {
         <div className="home-first__body">
           <div className="home-first__col-01">
             {lastPosts.map((post) => (
-                <Link href={`/news/${post.slug}`} className="featured-post" key={post.slug} style={{ backgroundImage: `url(${post.image})` }}>
-                    <div className="post-inner">
-                      <h3>{post.title}</h3>
-                      <div
-                        className="excerpt"
-                        dangerouslySetInnerHTML={{ __html: post.excerpt }}
-                      />
-                      <span>{post.format_date}</span>
-                    </div>
-                </Link>
+                <FeaturedPostCard key={post.slug} postObject = {post} />
               ))}
           </div>
           <div className="home-first__col-02">
             <h2>Latest</h2>
             {nextPosts.map((post) => (
-                <Link href={`/news/${post.slug}`} className="featured-post" key={post.slug} >
-                    <div className="post-thumb" style={{ backgroundImage: `url(${post.image})` }}></div>
-                    <div className="post-inner">
-                      <h3>{post.title}</h3>
-                      <span>{post.format_date}</span>
-                    </div>
-                </Link>
+                <LatestPostCard key={post.slug} postObject = {post} />
               ))}
           </div>
         </div>

@@ -3,6 +3,7 @@ import { getPosts, getPost } from "@/src/utils/blogUtils";
 import "@/public/scss/news.scss";
 import Link from "next/link";
 import CategoryPosts from "@/src/component/CategoryPosts";
+import LatestPostCard from "@/src/component/LatestPostCard";
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getPost(slug);
@@ -37,16 +38,7 @@ async function SingleNews({ params: { slug } }) {
               <div className="post-first__col-02">
                 <h2>Trending</h2>
                 {trendingPosts.map((post) => (
-                  <Link href="#" className="featured-post" key={post.slug}>
-                    <div
-                      className="post-thumb"
-                      style={{ backgroundImage: `url(${post.image})` }}
-                    ></div>
-                    <div className="post-inner">
-                      <h3>{post.title}</h3>
-                      <span>{post.format_date}</span>
-                    </div>
-                  </Link>
+                  <LatestPostCard key={post.slug} postObject={post} />
                 ))}
               </div>
             </div>
