@@ -24,7 +24,7 @@ function Footer() {
             <Link href="/ethereum">Ethereum</Link>
             <Link href="/blockchain">Blockchain</Link>
             <Link href="#">About us</Link>
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="#">Contact Us</Link>
             <Link href="#">Submit topic</Link>
           </nav>
           <div className="footer-contacts">

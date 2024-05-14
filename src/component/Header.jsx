@@ -28,7 +28,7 @@ function Header() {
           <nav>
             <Link href="/about-us">About us</Link>
             <Link href="#">Submit topic</Link>
-            <Link href="/contact-us">Contact Us</Link>
+            <Link href="#">Contact Us</Link>
           </nav>
 
           
