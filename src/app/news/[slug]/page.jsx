@@ -20,7 +20,7 @@ export async function generateMetadata({ params: { slug } }) {
 
 async function SingleNews({ params: { slug } }) {
   const post = await getPost(slug);
-  const trendingPosts = await getPosts(1, 3, "Trending", 0);
+  const trendingPosts = await getPosts("", 3, "Trending", 0);
   return (
     <>
       <div className="single-post">

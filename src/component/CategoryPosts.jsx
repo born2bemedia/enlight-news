@@ -4,7 +4,7 @@ import Link from "next/link";
 import PostCard from "./PostCard";
 
 async function CategoryPosts({ categoryTitle, category }) {
-  const categoryPosts = await getPosts(1, 3, category, 0);
+  const categoryPosts = await getPosts("", 3, category, 0);
   let url = category.toLowerCase();
   return (
     <section className="category-wrap">

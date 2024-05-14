@@ -5,8 +5,8 @@ import FeaturedPostCard from "../FeaturedPostCard";
 import LatestPostCard from "../LatestPostCard";
 
 async function HomeFirst() {
-  const lastPosts = await getPosts(1, 1, "", 0);
-  const nextPosts = await getPosts(1, 3, "", 1);
+  const lastPosts = await getPosts("", 1, "", 0);
+  const nextPosts = await getPosts("", 3, "", 1);
   return (
     <section className="home-first">
       <div className="_container">
