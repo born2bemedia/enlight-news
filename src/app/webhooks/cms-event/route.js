@@ -2,11 +2,6 @@ import { CACHE_TAG_REVIEWS } from "@/src/utils/blogUtils";
 import { revalidateTag } from "next/cache";
 
 export default async function handler(req, res) {
-  if (req.method !== "POST") {
-    // Only accept POST requests to handle revalidation
-    return res.status(405).json({ error: "Method Not Allowed" });
-  }
-
   try {
     const payload = await req.json();
     // You can add conditions here to check for specific events in the payload
