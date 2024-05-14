@@ -11,12 +11,14 @@ import HomeLast from "../component/home/HomeLast";
 import HomeFifth from "../component/home/HomeFifth";
 import HomeSeven from "../component/home/HomeSeven";
 import CategoryPosts from "../component/CategoryPosts";
+import SubscribeBlock from "../component/SubscribeBlock";
 
 export default function Home() {
   return (
     <>
       <HomeFirst />
       <CategoryPosts categoryTitle="Trending" category="Trending" />
+      <SubscribeBlock />
       <CategoryPosts categoryTitle="Bitcoin" category="Bitcoin" />
       <CategoryPosts categoryTitle="Ethereum" category="Ethereum" />
       <CategoryPosts categoryTitle="Blockchain" category="Blockchain" />

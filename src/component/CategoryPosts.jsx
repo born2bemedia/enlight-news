@@ -4,12 +4,13 @@ import Link from "next/link";
 
 async function CategoryPosts({ categoryTitle, category }) {
   const categoryPosts = await getPosts(1, 3, category, 0);
+  let url = category.toLowerCase();
   return (
     <section className="category-wrap">
       <div className="_container">
         <div className="category-wrap__top">
           <h2>{categoryTitle}</h2>
-          <Link href="#">
+          <Link href={`/${url}`}>
             View all
             <svg
               width="32"

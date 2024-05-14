@@ -5,6 +5,7 @@ import AboutFourth from "./_components/AboutFourth";
 import AboutLast from "./_components/AboutLast";
 import AboutSecond from "./_components/AboutSecond";
 import AboutThird from "./_components/AboutThird";
+import SubscribeBlock from "@/src/component/SubscribeBlock";
 
 export const metadata = {
   title: "About Us",
@@ -24,6 +25,7 @@ function AboutUs() {
       <div className="dark">
         <AboutFirst />
         <AboutSecond />
+        <SubscribeBlock />
       </div>
     </>
   );

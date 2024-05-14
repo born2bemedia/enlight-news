@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 
-.dark{
-    background: #0F0F0F;
+.dark {
+  background: #0f0f0f;
 }
 
 body {
@@ -163,14 +163,14 @@ a {
   }
 }
 
-.single-post{
-    .category-wrap{
-        &__top {
-            a{
-                display: none;
-            }
-        }
+.single-post {
+  .category-wrap {
+    &__top {
+      a {
+        display: none;
+      }
     }
+  }
 }
 
 .main-button {
@@ -599,4 +599,186 @@ a {
 
 button {
   cursor: pointer;
+}
+
+.subscribe-block {
+  overflow: hidden;
+  @media (max-width: 992px) {
+    ._container {
+      padding: 0;
+    }
+  }
+  &__body {
+    border-radius: 0px 24px 24px 24px;
+    padding: 140px 85px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(
+      117deg,
+      #333cef 8.25%,
+      #0b98ff 37.98%,
+      #9ce500 67.71%,
+      #acd64e 97.44%
+    );
+    @media (max-width: 1375px) {
+      padding: 100px 60px;
+    }
+    @media (max-width: 992px) {
+      border-radius: 0;
+      padding: 100px 16px 290px 16px;
+    }
+    &:before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      position: absolute;
+      z-index: 1;
+      background: linear-gradient(
+        279deg,
+        rgba(15, 15, 15, 0) -7.27%,
+        #0f0f0f 97.2%
+      );
+    }
+    > div {
+      position: relative;
+      z-index: 2;
+    }
+    .image-wrap {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      @media (max-width: 1375px) {
+        width: 50%;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+      @media (max-width: 1400px) and (min-width: 1000px) {
+        width: 38%;
+      }
+      @media (max-width: 992px) {
+        width: 100%;
+        justify-content: flex-end;
+        img {
+          width: auto;
+          height: auto;
+          max-height: 350px;
+          width: 100%;
+          margin-bottom: -70px;
+        }
+      }
+      @media (max-width: 992px) and (min-width: 767px) {
+        height: auto;
+        width: 50%;
+        overflow: unset;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
+  h2 {
+    color: #f0f0f7;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%;
+    position: relative;
+    z-index: 2;
+    margin: 0 0 80px 0;
+    @media (max-width: 992px) {
+      margin: 0 0 60px 0;
+      font-size: 32px;
+      text-align: center;
+      br {
+        display: none;
+      }
+    }
+  }
+  p {
+    color: #f0f0f7;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin: 0 0 80px 0;
+    position: relative;
+    z-index: 2;
+    @media (max-width: 992px) {
+      margin: 0 0 64px 0;
+      font-size: 16px;
+      text-align: center;
+    }
+  }
+  a {
+    position: relative;
+    z-index: 2;
+    @media (max-width: 992px) {
+      margin: 0 auto;
+    }
+  }
+
+  .subscribe-form {
+    max-width: 470px;
+    @media (max-width: 992px) {
+      max-width: 100%;
+    }
+    .status-message{
+        color: #f0f0f7;
+        font-size: 14px;
+        margin-top: 16px;
+    }
+    .form-row {
+      display: flex;
+      border-radius: 0px 0px 24px 0px;
+      background: #f0f0f7;
+      @media (max-width: 992px) {
+        max-width: 100%;
+        flex-direction: column;
+        gap: 24px;
+        background: transparent;
+      }
+      .input-wrap {
+        position: relative;
+        flex-grow: 1;
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+        input {
+          width: 100%;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 1;
+          text-align: left;
+          height: 56px;
+          display: flex;
+          align-items: center;
+          padding: 0 24px;
+          background: #f0f0f7;
+          border: 1px solid #f0f0f7;
+        }
+        > span {
+          position: absolute;
+          font-size: 12px;
+          color: #f00;
+        }
+      }
+      button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        outline: none;
+        .main-button {
+          width: 100%;
+        }
+        @media (max-width: 992px) {
+          width: 100%;
+        }
+      }
+    }
+  }
 }
