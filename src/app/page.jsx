@@ -10,17 +10,16 @@ import HomeNine from "../component/home/HomeNine";
 import HomeLast from "../component/home/HomeLast";
 import HomeFifth from "../component/home/HomeFifth";
 import HomeSeven from "../component/home/HomeSeven";
+import CategoryPosts from "../component/CategoryPosts";
 
 export default function Home() {
   return (
     <>
       <HomeFirst />
-      <HomeThird />
-      <HomeFourth />
-
-      <HomeSixth />
-      <HomeFifth />
-      <HomeLast />
+      <CategoryPosts categoryTitle="Trending" category="Trending" />
+      <CategoryPosts categoryTitle="Bitcoin" category="Bitcoin" />
+      <CategoryPosts categoryTitle="Ethereum" category="Ethereum" />
+      <CategoryPosts categoryTitle="Blockchain" category="Blockchain" />
     </>
   );
 }

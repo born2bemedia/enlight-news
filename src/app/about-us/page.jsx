@@ -8,10 +8,12 @@ import AboutThird from "./_components/AboutThird";
 
 export const metadata = {
   title: "About Us",
-  description: "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
+  description:
+    "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
   openGraph: {
     title: "About Us",
-    description: "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
+    description:
+      "Meet Enlight Systems! Learn how we came to design Enlight Dashboard, what challenges, problems, and issues the dashboard covers, and how we will optimize it!",
     images: "https://enlight.systems/images/meta.png",
   },
 };
@@ -19,11 +21,10 @@ export const metadata = {
 function AboutUs() {
   return (
     <>
-      <AboutFirst />
-      <AboutSecond />
-      <AboutThird />
-      <AboutFourth />
-      <AboutLast />
+      <div className="dark">
+        <AboutFirst />
+        <AboutSecond />
+      </div>
     </>
   );
 }

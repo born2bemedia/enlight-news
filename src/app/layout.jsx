@@ -9,18 +9,18 @@ const epilogue = Epilogue({ subsets: ["latin"] });
 
 export const metadata = {
   title: {
-    default: "Complex Crypto Marketing Platform | Enlight Systems",
-    template: "%s | Enlight Systems",
+    default: "All crypto news | Enlight News",
+    template: "%s",
   },
   description:
-    "Enlight offers a single dashboard for all your crypto marketing needs. Manage and track campaign performance, budgets, customers, and compliance.",
+    "Explore the latest crypto market news, get expert insights, and read opinions. We closely monitor the market to keep you informed!",
   openGraph: {
     title: {
-      default: "Complex Crypto Marketing Platform | Enlight Systems",
-      template: "%s | Enlight Systems",
+      default: "All crypto news | Enlight News",
+      template: "%s",
     },
     description:
-      "Enlight offers a single dashboard for all your crypto marketing needs. Manage and track campaign performance, budgets, customers, and compliance.",
+      "Explore the latest crypto market news, get expert insights, and read opinions. We closely monitor the market to keep you informed!",
     images: "https://enlight.systems/images/meta.png",
   },
 };

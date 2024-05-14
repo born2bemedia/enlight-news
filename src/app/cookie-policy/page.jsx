@@ -26,7 +26,7 @@ function PrivacyPage() {
           <div className="policy-content__body">
             <article>
               <p>
-                Enlight Systems ("we" or "us") uses cookies on our website. By
+                Enlight News ("we" or "us") uses cookies on our website. By
                 using our website, you consent to the use of cookies by this
                 Cookie Policy.
               </p>
@@ -113,8 +113,8 @@ function PrivacyPage() {
               </p>
               <ul>
                 <li>
-                  Email:{" "}
-                  <a href="mailto:info@enlight.systems">info@enlight.systems</a>
+                  Email: 
+                  <a href="mailto:info@enlight.news">info@enlight.news</a>
                 </li>
               </ul>
               <p>We are here to help.</p>

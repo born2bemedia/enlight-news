@@ -16,23 +16,22 @@ function Header() {
           <Link href="/">
             <img alt="logo" src="/logo.svg" />
           </Link>
+
+          <nav className="categories"> 
+            <Link href="/news">All news</Link>
+            <Link href="/trending">Trending</Link>
+            <Link href="/bitcoin">Bitcoin</Link>
+            <Link href="/ethereum">Ethereum</Link>
+            <Link href="/blockchain">Blockchain</Link>
+          </nav>
+
           <nav>
-            <Link href="/purpose">Purposes</Link>
-            <Link href="/resources">Resources</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/get-started">Get Started</Link>
             <Link href="/about-us">About us</Link>
-            <Link href="/quick-contact">Quick Contact</Link>
+            <Link href="#">Submit topic</Link>
             <Link href="/contact-us">Contact Us</Link>
           </nav>
 
-          <div className="header-right">
-            <Link href="/login" className="login">
-              Log In
-            </Link>
-
-            <MobileMenu />
-          </div>
+          
         </div>
       </div>
     </header>

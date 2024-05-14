@@ -7,21 +7,28 @@ function Footer() {
     <footer>
       <div className="_container">
         <div className="footer-top">
-          <Link href="/">
-            <img alt="logo" src="/logo.svg" />
-          </Link>
+          <div>
+            <Link href="/">
+              <img alt="logo" src="/logo.svg" />
+            </Link>
+            <p>
+              Stay Enlightened. Your go-to source for all things crypto: news,
+              marketing, and regulations.
+            </p>
+          </div>
           <nav>
-          <Link href="/">Main page</Link>
-            <Link href="/purpose">Purposes</Link>
-            <Link href="/resources">Resources</Link>
-            <Link href="/pricing">Pricing</Link>
-            <Link href="/get-started">Get Started</Link>
-            <Link href="/about-us">About us</Link>
-            <Link href="/quick-contact">Quick Contact</Link>
+            <Link href="/">Main page</Link>
+            <Link href="/news">All news</Link>
+            <Link href="/trending">Trending</Link>
+            <Link href="/bitcoin">Bitcoin</Link>
+            <Link href="/ethereum">Ethereum</Link>
+            <Link href="/blockchain">Blockchain</Link>
+            <Link href="#">About us</Link>
             <Link href="/contact-us">Contact Us</Link>
+            <Link href="#">Submit topic</Link>
           </nav>
           <div className="footer-contacts">
-            <Link href="mailto:info@enlight.business">
+            <Link href="mailto:info@enlight.news">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="25"
@@ -50,9 +57,9 @@ function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-              <span>info@enlight.business</span>
+              <span>info@enlight.news</span>
             </Link>
-            <Link href="tel:+447458149408">
+            <Link href="tel:">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -73,7 +80,7 @@ function Footer() {
                   fill="#97D80F"
                 />
               </svg>
-              <span>+44 745 814 94 08</span>
+              <span>Phone</span>
             </Link>
             <Link href="#">
               <svg
@@ -104,13 +111,15 @@ function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-              <span><b>Registered address:</b> Rooms 1703-1704, 17/F, Tung <br/>Chiu Commercial Centre, 193 Lockhart Road, <br/>Wanchai, Hong Kong</span>
+              <span>
+                <b>Registered address:</b>
+              </span>
             </Link>
           </div>
         </div>
         <div className="footer-bottom">
           <nav>
-            <Link href="/terms-of-service">Terms and Conditions</Link>
+            <Link href="/terms-of-service">Terms of Use</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/cookie-policy">Cookie Policy</Link>
           </nav>

@@ -26,40 +26,37 @@ function PrivacyPage() {
           <div className="policy-content__body">
             <article>
               <p>
-                This Privacy Policy statement is presented by Enlight Systems
-                (Marketera HK), collectively referred to as "Enlight Systems,"
+                This Privacy Policy statement is presented by Enlight News
+                (Marketera HK), collectively referred to as "Enlight News,"
                 "we," "us," or "our."
               </p>
               <h2>
                 <strong>Privacy Commitment</strong>
               </h2>
               <p>
-                Enlight Systems prioritises customer and user privacy. We only
+                Enlight News prioritises customer and user privacy. We only
                 request the minimum amount of information necessary, collecting
-                only what we consider essential for conducting business or the
-                specific transaction. We inform customers about the information
-                we hold about them and allow them to opt out of specific
-                engagements. Our primary commitment is that we do not generate
-                any revenue from advertising. This ensures that we avoid the
-                inherent conflict of interest between collecting customer
-                information and generating advertising revenue, along with the
-                inevitable compromises to customer privacy that such a conflict
-                entails.
+                only what we consider essential for conducting business. We
+                inform customers about the information we hold about them and
+                allow them to opt out of specific engagements. Our primary
+                commitment is that we do not generate any revenue from
+                advertising. This ensures that we avoid the inherent conflict of
+                interest between collecting customer information and generating
+                advertising revenue, along with the inevitable compromises to
+                customer privacy that such a conflict entails.
               </p>
               <h2>
-                <strong>What information Enlight Systems collects</strong>
+                <strong>What information Enlight News collects</strong>
               </h2>
               <p>
                 We only collect information about you when necessary for a
-                legitimate purpose. Enlight Systems will have information about
-                you if:
+                legitimate purpose. Enlight News will have information about you
+                if:
               </p>
               <p>(a) You provide the information yourself,</p>
+              <p>(b) Enlight News automatically collects the information, or</p>
               <p>
-                (b) Enlight Systems automatically collects the information, or
-              </p>
-              <p>
-                (c) Enlight Systems obtains the information from a third party.
+                (c) Enlight News obtains the information from a third party.
               </p>
               <p>
                 Below, we describe the different scenarios falling under these
@@ -70,26 +67,12 @@ function PrivacyPage() {
               </h3>
               <ol>
                 <li>
-                  Account signup: When you sign up for an account to access our
-                  dashboard solution, we request information such as your name,
-                  contact number, email address, project name and website.&nbsp;
-                </li>
-                <li>
-                  Payment processing: When you make a purchase, we request your
-                  name, contact information, credit card information, or other
-                  payment account details. With your approval for quick
-                  processing of future payments, we may store your credit card
-                  or payment information in an encrypted format on the secured
-                  servers of our Payment Gateway Service Providers.
+                  Interactions with Enlight News: We may record, analyse, and
+                  use your interactions with us through email with our customer
+                  support professionals to improve our interactions with you and
+                  other customers.
                 </li>
               </ol>
-              <p>
-                iii. Interactions with Enlight Systems: We may record, analyse,
-                and use your interactions with us, including email, telephone,
-                and chat conversations with our sales and customer support
-                professionals, to improve our interactions with you and other
-                customers.
-              </p>
               <h3>
                 <strong>Information we collect automatically:</strong>
               </h3>
@@ -107,15 +90,14 @@ function PrivacyPage() {
                 <li>
                   Information from cookies and tracking technologies: We use
                   temporary and permanent cookies to identify users of our
-                  services and enhance user experience. We embed unique
-                  identifiers in our downloadable products to track usage.
-                  Additionally, we use cookies, beacons, tags, scripts, and
-                  similar technologies to identify visitors, track website
-                  navigation, gather demographic information, understand email
-                  campaign effectiveness, and engage with visitors and users by
-                  tracking activities on our websites. We primarily use
-                  first-party cookies and do not use third-party cookies or
-                  other third-party tracking technologies for non-essential or
+                  services and enhance user experience. Additionally, we use
+                  cookies, beacons, tags, scripts, and similar technologies to
+                  identify visitors, track website navigation, gather
+                  demographic information, understand email campaign
+                  effectiveness, and engage with visitors and users by tracking
+                  activities on our websites. We primarily use first-party
+                  cookies and do not use third-party cookies or other
+                  third-party tracking technologies for non-essential or
                   intrusive tracking on our websites.&nbsp;
                 </li>
               </ol>
@@ -126,17 +108,17 @@ function PrivacyPage() {
                 <li>
                   Information from social media sites and other publicly
                   available sources: When you provide feedback or reviews about
-                  our products, interact, or engage with us on marketplaces,
-                  review sites, or social media sites such as Facebook, Twitter,
-                  LinkedIn, and Instagram through posts, comments, questions,
-                  and other interactions, we may collect publicly available
-                  information, including profile information. This allows us to
-                  connect with you, improve our products, better understand user
-                  reactions and issues, or reproduce and publish your feedback
-                  on our websites. Please note that once collected, this
-                  information may remain with us even if you delete it from
-                  these sites. Enlight Systems may also add and update
-                  information about you from other publicly available sources.
+                  our services, interact, or engage with us on review sites, or
+                  social media sites such as Facebook, Twitter, LinkedIn, and
+                  Instagram through posts, comments, questions, and other
+                  interactions, we may collect publicly available information,
+                  including profile information. This allows us to connect with
+                  you, improve our content, better understand user reactions and
+                  issues, or reproduce and publish your feedback on our
+                  websites. Please note that once collected, this information
+                  may remain with us even if you delete it from these sites.
+                  Enlight News may also add and update information about you
+                  from other publicly available sources.
                 </li>
               </ol>
               <h2>
@@ -149,44 +131,27 @@ function PrivacyPage() {
               <ul>
                 <li>
                   Communication: We may communicate with you (e.g., via email)
-                  regarding the materials you've downloaded, services you've
-                  signed up for, changes to this Privacy Policy, changes to the
-                  Terms of Service, or important notices.
+                  regarding the publications you've interacted with, changes to
+                  this Privacy Policy, changes to the Terms of Service, or
+                  important notices.
                 </li>
                 <li>
-                  Updates and Offers: We may keep you informed about new offers
-                  and services, upcoming events, promotions, and other
-                  information we believe may interest you.
+                  Updates and Offers: We may keep you informed about new
+                  content, upcoming events, promotions, and other information we
+                  believe may interest you.
                 </li>
                 <li>
                   Feedback: We may invite you to participate in surveys or
-                  request feedback on our products and services.
+                  request feedback on our services.
                 </li>
                 <li>
-                  Account Maintenance: We use your information to set up and
-                  maintain your account and perform all other necessary tasks to
-                  provide our services. This includes enabling collaboration,
-                  providing website and email hosting, and backing up and
-                  restoring your data.
-                </li>
-                <li>
-                  Product Improvement: We analyse how users utilise our products
-                  and services to monitor and address issues and enhance our
+                  Content Improvement: We analyse how users interact with our
+                  publications to monitor and address issues and enhance our
                   offerings.
                 </li>
                 <li>
                   Customer Support: We provide customer support and analyse and
                   improve customer interactions.
-                </li>
-                <li>
-                  Security: We detect and prevent illegal activities, report
-                  spam, and safeguard the rights and interests of Enlight
-                  Systems, our users, third parties, and the public.
-                </li>
-                <li>
-                  Record Management: We update, expand, and analyse our records,
-                  identify new customers, and offer products and services that
-                  may interest you.
                 </li>
                 <li>
                   Analytics: We analyse trends, manage our websites, and track
@@ -205,7 +170,7 @@ function PrivacyPage() {
               </h2>
               <p>
                 <strong>
-                  Legal processing bases applicable to Enlight Systems:
+                  Legal processing bases applicable to Enlight News:
                 </strong>{" "}
                 If you are an individual from the European Economic Area (EEA),
                 the legal basis for our information collection and use depends
@@ -218,9 +183,9 @@ function PrivacyPage() {
               </p>
               <p>(i) Contractual necessity:</p>
               <p>
-                (ii) One or more legitimate interests of Enlight Systems or a
-                third party that are not overridden by your data protection
-                interests or
+                (ii) One or more legitimate interests of Enlight News or a third
+                party that are not overridden by your data protection interests
+                or
               </p>
               <p>(iii) Your consent.</p>
               <p>
@@ -234,10 +199,11 @@ function PrivacyPage() {
               <p>
                 If we rely on your consent as the legal basis for processing
                 your information, you have the right to withdraw your consent at
-                any time. However, this will not affect any processing that has
-                already occurred.
+                any time.&nbsp;
               </p>
-              <p>Legitimate interests notice:</p>
+              <p>
+                <strong>Legitimate interests notice:</strong>
+              </p>
               <p>
                 If we rely on legitimate interests as the legal basis and those
                 interests are not specified above, we will clearly explain to
@@ -257,10 +223,8 @@ function PrivacyPage() {
                 messages by using the &lsquo;unsubscribe&rsquo; function
                 included in all such messages. However, please note that you
                 will continue to receive essential notices and emails, such as
-                account notification emails (e.g., password change, renewal
-                reminders), security incident alerts, security and privacy
-                update notifications, and essential transactional and
-                payment-related emails.
+                security and privacy update notifications, and major website
+                changes.
               </p>
               <h3>
                 <strong>Disable cookies:</strong>
@@ -270,22 +234,13 @@ function PrivacyPage() {
                 However, please be aware that if you do so, you may not be able
                 to use certain features of the websites properly.
               </p>
-              <h3>
-                <strong>Optional information:</strong>
-              </h3>
-              <p>
-                You have the choice not to provide optional profile information.
-                Additionally, you can delete or change your optional profile
-                information at any time. When submitting any form linked to our
-                websites, you cannot fill in non-mandatory fields.
-              </p>
               <h2>
                 <strong>Who we share your information with</strong>
               </h2>
               <p>
-                All Enlight Systems group entities listed here have access to
-                the information outlined in this Privacy Policy. We do not sell
-                any personal information. We only share your information as
+                All Enlight News group entities listed here have access to the
+                information outlined in this Privacy Policy. We do not sell any
+                personal information. We only share your information as
                 described in this Privacy Policy and only with parties who
                 implement appropriate confidentiality and security measures.
               </p>
@@ -293,9 +248,9 @@ function PrivacyPage() {
                 <strong>Employees and contractors:</strong>
               </h3>
               <p>
-                Employees and independent contractors of Enlight Systems have
+                Employees and independent contractors of Enlight News have
                 access to the information on a need-to-know basis. We require
-                all employees and independent contractors of Enlight Systems to
+                all employees and independent contractors of Enlight News to
                 adhere to this Privacy Policy regarding the personal information
                 shared with them.
               </p>
@@ -318,9 +273,9 @@ function PrivacyPage() {
               </h2>
               <p>
                 If you are in the European Economic Area (EEA), you have certain
-                rights regarding the information held about you by Enlight
-                Systems. Enlight Systems is committed to providing you with
-                these rights, regardless of your country of residence.
+                rights regarding the information held about you by Enlight News.
+                Enlight News is committed to providing you with these rights,
+                regardless of your country of residence.
               </p>
               <ul>
                 <li>
@@ -390,102 +345,26 @@ function PrivacyPage() {
                 possible.
               </p>
               <h2>
-                <strong>Ownership and control of your service data</strong>
-              </h2>
-              <p>
-                We acknowledge that you own your service data. We provide you
-                with complete control over your service data by giving you the
-                ability to:
-              </p>
-              <ul>
-                <li>Access your service data</li>
-                <li>
-                  Share your service data through supported third-party
-                  integrations
-                </li>
-                <li>Request the export or deletion of your service data</li>
-              </ul>
-              <h2>
-                <strong>How we use service data</strong>
-              </h2>
-              <p>
-                We process your service data based on the instructions you
-                provide through the various modules of our services. For
-                example:
-              </p>
-              <ul>
-                <li>
-                  When you use our campaign management service for email
-                  marketing, the email addresses of the individuals on your
-                  mailing list will be used to send the emails.
-                </li>
-              </ul>
-              <h2>
-                <strong>Who we share service data with</strong>
-              </h2>
-              <h3>
-                <strong>Enlight Systems and third-party sub-processors:</strong>
-              </h3>
-              <p>
-                To provide services and technical support for our products,
-                Enlight Systems may engage third parties.
-              </p>
-              <h3>
-                <strong>Employees and independent contractors:</strong>
-              </h3>
-              <p>
-                We may grant access to your service data to our employees and
-                individuals who are independent contractors of the Enlight
-                Systems involved in providing the services. This access enables
-                them to:
-              </p>
-              <ul>
-                <li>Identify, analyse, and resolve errors</li>
-                <li>
-                  Manually verify emails reported as spam to improve spam
-                  detection
-                </li>
-              </ul>
-              <p>
-                Manually verify scanned images that you submit to us to verify
-                the accuracy of optical character recognition
-              </p>
-              <ul>
-                <li>
-                  We ensure that access by our employees to your service data is
-                  restricted to specific individuals, and it is logged and
-                  audited. Our employees will also have access to data that you
-                  knowingly share with us for technical support or to import
-                  data into our products or services. We communicate our privacy
-                  and security guidelines to our employees and strictly enforce
-                  privacy safeguards within the Enlight Systems group.
-                </li>
-              </ul>
-              <h2>
                 <strong>Children&rsquo;s personal information</strong>
               </h2>
               <p>
-                Our products and services are not intended for individuals under
-                18. Enlight Systems does not knowingly collect personal
-                information from children under the age of 18 for its purposes.
-                If we become aware that a child under 18 has provided us with
-                personal information, we will take steps to delete such
-                information. If you believe that a child under the age of 18 has
-                provided personal information to us, please contact us at
-                info@enlight.systems with the details, and we will take the
-                necessary steps to delete the information we hold about that
-                child. However, using our products, you may collect information
-                about individuals who may be children. If you process
-                information relating to children, you acknowledge and agree that
-                you will be responsible for complying with applicable laws and
-                regulations associated with protecting such personal
-                information.
+                Our content is not intended for individuals under 18. Enlight
+                news does not knowingly collect personal information from
+                children under the age of 18 for its purposes. If we become
+                aware that a child under 18 has provided us with personal
+                information, we will take steps to delete such information. If
+                you believe that a child under the age of 18 has provided
+                personal information to us, please contact us at{" "}
+                
+                <a href="mailto:info@enlight.news">info@enlight.news</a> with
+                the details, and we will take the necessary steps to delete the
+                information we hold about that child.&nbsp;
               </p>
               <h2>
                 <strong>Data security</strong>
               </h2>
               <p>
-                At Enlight Systems, we take data security very seriously. That's
+                At Enlight News, we take data security very seriously. That's
                 why we have obtained certifications for industry standards
                 mentioned here. We have implemented appropriate administrative,
                 technical, and physical safeguards to prevent unauthorised
@@ -493,30 +372,30 @@ function PrivacyPage() {
                 information you entrust to us. If you have any concerns
                 regarding the security of your data, we encourage you to review
                 our Security Policy or contact us at
-                <a href="mailto:info@enlight.systems">info@enlight.systems</a>
-                with any questions.
+                
+                <a href="mailto:info@enlight.news">info@enlight.news</a>with
+                any questions.
               </p>
               <h2>
                 <strong>Locations and international transfers</strong>
               </h2>
               <p>
                 We share your personal information and service data within
-                Enlight Systems and with third parties engaged by Enlight
-                Systems for the purposes described above. By accessing or using
-                our products and services or otherwise providing personal
-                information or service data to us, you understand that the
-                processing, transfer, and storage of your personal information
-                or Service Data may occur within the United States of America,
-                the European Economic Area (EEA), and other countries where
-                Enlight Systems operates. Such transfers are subject to
-                appropriate data protection agreements, such as a group company
-                agreement based on the EU Commission&rsquo;s Model Contractual
-                Clauses for data processing activities to which the GDPR
-                applies. You can contact{" "}
-                <a href="mailto:info@enlight.systems">info@enlight.systems</a>{" "}
-                to obtain a copy of the agreements based on which we transfer
-                your data within Enlight Systems and with the third parties we
-                engage.
+                Enlight News and with third parties engaged by Enlight News for
+                the purposes described above. By accessing or interacting with
+                our content or otherwise providing personal information or
+                service data to us, you understand that the processing,
+                transfer, and storage of your personal information may occur
+                within the United States of America, the European Economic Area
+                (EEA), and other countries where Enlight News operates. Such
+                transfers are subject to appropriate data protection agreements,
+                such as a group company agreement based on the EU
+                Commission&rsquo;s Model Contractual Clauses for data processing
+                activities to which the GDPR applies. You can contact{" "}
+                
+                <a href="mailto:info@enlight.news">info@enlight.news</a>to
+                obtain a copy of the agreements based on which we transfer your
+                data within Enlight News and with the third parties we engage.
               </p>
               <h2>
                 <strong>External links on our websites</strong>
@@ -573,8 +452,9 @@ function PrivacyPage() {
                 this Privacy Policy. If you have any concerns about our
                 adherence to this Privacy Policy or how your personal
                 information is used, kindly contact us at{" "}
-                <a href="mailto:info@enlight.systems">info@enlight.systems</a>.
-                We will contact you and, if necessary, coordinate with the
+                
+                <a href="mailto:info@enlight.news">info@enlight.news</a>. We
+                will contact you and, if necessary, coordinate with the
                 appropriate regulatory authorities to effectively address your
                 concerns.
               </p>
@@ -582,20 +462,20 @@ function PrivacyPage() {
                 <strong>Notification of changes</strong>
               </h2>
               <p>
-                We may modify the Privacy Policy at any time, and we will notify
-                you of significant changes through emailing your primary email
-                address. If we make substantial changes to the Privacy Policy
-                that affect your rights, you will be provided with at least 30
-                days advance notice by email to your primary email address.
-                However, if you have not verified your email address, you may
-                miss essential notifications that we send through email. If you
-                believe the updated Privacy Policy affects your rights
-                concerning your use of our products or services, you may
-                terminate your use by emailing us within 30 days. Your continued
-                use after the effective date of changes to the Privacy Policy
-                will be deemed your agreement to the modified Privacy Policy.
-                You will not receive email notifications about minor changes to
-                the Privacy Policy.&nbsp;
+                We may modify the Privacy Policy at any time and notify you of
+                significant changes by emailing your primary email address. If
+                we make substantial changes to the Privacy Policy that affect
+                your rights, you will be provided with at least 30 days advance
+                notice by email to your primary email address. However, if you
+                have not provided or you have changed your email address without
+                our prior notice, you may miss essential notifications that we
+                send through email. If you believe the updated Privacy Policy
+                affects your rights concerning our content, you may terminate
+                your use by emailing us within 30 days. Your continued use after
+                the effective date of changes to the Privacy Policy will be
+                deemed your agreement to the modified Privacy Policy. You will
+                not receive email notifications about minor changes to the
+                Privacy Policy.&nbsp;
               </p>
               <h2>
                 <strong>Contact Us</strong>
@@ -606,8 +486,8 @@ function PrivacyPage() {
               </p>
               <ul>
                 <li>
-                  Email:{" "}
-                  <a href="mailto:info@enlight.systems">info@enlight.systems</a>
+                  Email: 
+                  <a href="mailto:info@enlight.news">info@enlight.news</a>
                 </li>
               </ul>
               <p>We are here to help.</p>

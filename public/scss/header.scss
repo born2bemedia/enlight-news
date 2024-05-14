@@ -10,6 +10,7 @@ header{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        height: 88px;
         @media (max-width:992px){
             height: 88px;
         }
@@ -21,7 +22,7 @@ header{
             align-items: center;
             justify-content: flex-end;
             gap:48px;
-            height: 88px;
+            
             @media (max-width:1100px){
                 gap:16px;
             }
@@ -33,7 +34,7 @@ header{
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 400;
-                line-height: 140%;
+                line-height: 1;
                 display: flex;
                 align-items: center;
                 gap:8px;
@@ -60,12 +61,19 @@ header{
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
-                    line-height: 140%;
+                    line-height: 1;
                     display: flex;
                     align-items: center;
                     gap:8px;
                 }
             }
+
+            &.categories{
+                background: #2A2A2A;
+                padding: 14px 24px;
+                border-radius: 8px;
+            }
+
         }
         .login{
             color: var(--1, #F0F0F7);
