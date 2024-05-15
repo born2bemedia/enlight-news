@@ -1,12 +1,11 @@
-"use client";
-import { RevealWrapper } from "next-reveal";
+
 import React from "react";
 import Link from "next/link";
 
 function FeaturedPostCard({ postObject }) {
   return (
     <>
-      <RevealWrapper origin="bottom">
+      <div>
         <Link
           href={`/news/${postObject.slug}`}
           className="featured-post"
@@ -21,7 +20,7 @@ function FeaturedPostCard({ postObject }) {
             <span>{postObject.format_date}</span>
           </div>
         </Link>
-      </RevealWrapper>
+      </div>
     </>
   );
 }

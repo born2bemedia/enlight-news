@@ -10,22 +10,23 @@ function SubscribeBlock() {
     <section className="subscribe-block">
       <div className="_container">
         <div className="subscribe-block__body">
-          <RevealWrapper origin="bottom" delay={0} className="image-wrap">
+          <div className="image-wrap">
             <Image
               src={"/images/home/third-block-image.webp"}
               width={592}
               height={510}
             />
-          </RevealWrapper>
-          <RevealWrapper origin="bottom" delay={0}>
+          </div>
+          <div>
             <h2>
-            Get the latest crypto <br/>news right in your inbox
+              Get the latest crypto <br />
+              news right in your inbox
             </h2>
-          </RevealWrapper>
+          </div>
 
-          <RevealWrapper origin="bottom" delay={0}>
+          <div>
             <SubscribeForm />
-          </RevealWrapper>
+          </div>
         </div>
       </div>
     </section>
