@@ -1,10 +1,9 @@
-
 export const WORDPRESS_API_URL = "https://cms.enlight.news/wp-json/custom/v1";
 
 export async function fetchPosts(url) {
   const response = await fetch(url);
   if (!response.ok) {
-    throw new Error('Failed to fetch posts');
+    throw new Error("Failed to fetch posts");
   }
   return response.json();
 }
@@ -27,7 +26,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   url = url.slice(0, -1);
   const response = await fetch(url, {
     next: {
-      tags: ['blog'],
+      tags: ["blog"],
     },
   });
   //console.log(url);
@@ -42,7 +41,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
 export async function getPage(pageId) {
   const response = await fetch(`${WORDPRESS_API_URL}/page/${pageId}`, {
     next: {
-      tags: ['blog'],
+      tags: ["blog"],
     },
   });
   const page = await response.json();
@@ -55,7 +54,7 @@ export async function getPageCount(category = "") {
   url = url.slice(0, -1);
   const response = await fetch(url, {
     next: {
-      tags: ['blog'],
+      tags: ["blog"],
     },
   });
   const data = await response.json();
