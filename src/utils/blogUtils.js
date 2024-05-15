@@ -32,10 +32,8 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   });
   //console.log(url);
   const data = await response.json();
-  //console.log(data);
-  const posts = data.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
+  console.log(data);
+  const posts = data;
   return posts;
 }
 
