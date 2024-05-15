@@ -1,4 +1,4 @@
-import { CACHE_TAG_REVIEWS } from "@/lib/insights";
+import { CACHE_TAG_REVIEWS } from "@/src/utils/blogUtils";
 import { revalidateTag } from "next/cache";
 
 export async function POST(request) {
