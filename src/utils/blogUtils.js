@@ -22,7 +22,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   if (perPage) url += `per_page=${perPage}&`;
   if (category) url += `category=${category}&`;
   if (offset) url += `offset=${offset}&`;
-
+ 
   url = url.slice(0, -1);
   const response = await fetch(url, {
     next: {
