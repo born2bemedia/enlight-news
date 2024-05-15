@@ -119,7 +119,7 @@ function Footer() {
         </div>
         <div className="footer-bottom">
           <nav>
-            <Link href="/terms-of-service">Terms of Use</Link>
+            <Link href="/terms-of-use">Terms of Use</Link>
             <Link href="/privacy-policy">Privacy Policy</Link>
             <Link href="/cookie-policy">Cookie Policy</Link>
           </nav>

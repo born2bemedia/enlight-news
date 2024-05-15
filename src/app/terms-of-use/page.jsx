@@ -2,11 +2,11 @@ import React from "react";
 import "@/public/scss/policy.scss";
 
 export const metadata = {
-  title: "Terms of Service",
-  description: "Terms of Service",
+  title: "Terms of Use",
+  description: "Terms of Use",
   openGraph: {
-    title: "Terms of Service",
-    description: "Terms of Service",
+    title: "Terms of Use",
+    description: "Terms of Use",
     images: "https://enlight.news/images/meta.png",
   },
 };
@@ -17,7 +17,7 @@ function TermsPage() {
       <section className="policy-top">
         <div className="_container">
           <div className="policy-top__body">
-            <h1>Terms of Service</h1>
+            <h1>Terms of Use</h1>
           </div>
         </div>
       </section>
@@ -215,7 +215,7 @@ function TermsPage() {
               </p>
               <ul>
                 <li>
-                  Email: 
+                  Email: {" "}
                   <a href="mailto:info@enlight.news">info@enlight.news</a>
                 </li>
               </ul>

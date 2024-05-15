@@ -486,7 +486,7 @@ function PrivacyPage() {
               </p>
               <ul>
                 <li>
-                  Email: 
+                  Email:{" "}
                   <a href="mailto:info@enlight.news">info@enlight.news</a>
                 </li>
               </ul>
