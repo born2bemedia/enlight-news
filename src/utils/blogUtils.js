@@ -25,7 +25,9 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
 
   url = url.slice(0, -1);
   const response = await fetch(url, {
-    cache: 'no-store',
+    next: {
+      tags: ["blog"],
+    },
   });
   //console.log(url);
   const data = await response.json();
@@ -36,13 +38,24 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   return posts;
 }
 
+export async function getPage(pageId) {
+  const response = await fetch(`${apiUrl}/page/${pageId}`, {
+    next: {
+      tags: ["blog"],
+    },
+  });
+  const page = await response.json();
+  return page;
+}
 
 export async function getPageCount(category = "") {
   let url = `${apiUrl}/posts?`;
   if (category) url += `category=${category}&`;
   url = url.slice(0, -1);
   const response = await fetch(url, {
-    cache: 'no-store',
+    next: {
+      tags: ["blog"],
+    },
   });
   const data = await response.json();
   const posts = data.sort(
