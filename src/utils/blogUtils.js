@@ -1,4 +1,4 @@
-export const WORDPRESS_API_URL = "https://cms.enlight.news/wp-json/custom/v1";
+const apiUrl = process.env.NEXT_PUBLIC_apiUrl;
 
 export async function fetchPosts(url) {
   const response = await fetch(url);
@@ -16,7 +16,7 @@ export async function getPost(slug) {
 }
 
 export async function getPosts(page = 1, perPage = 4, category = "", offset) {
-  let url = `${WORDPRESS_API_URL}/posts?`;
+  let url = `${apiUrl}/posts?`;
 
   if (page) url += `page=${page}&`;
   if (perPage) url += `per_page=${perPage}&`;
@@ -39,7 +39,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
 }
 
 export async function getPage(pageId) {
-  const response = await fetch(`${WORDPRESS_API_URL}/page/${pageId}`, {
+  const response = await fetch(`${apiUrl}/page/${pageId}`, {
     next: {
       tags: ["blog"],
     },
@@ -49,7 +49,7 @@ export async function getPage(pageId) {
 }
 
 export async function getPageCount(category = "") {
-  let url = `${WORDPRESS_API_URL}/posts?`;
+  let url = `${apiUrl}/posts?`;
   if (category) url += `category=${category}&`;
   url = url.slice(0, -1);
   const response = await fetch(url, {
