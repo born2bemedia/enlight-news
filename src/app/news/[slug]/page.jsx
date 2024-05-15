@@ -46,8 +46,9 @@ async function SingleNews({ params: { slug } }) {
                   >
                     <div
                       className="post-thumb"
-                      style={{ backgroundImage: `url(${post.image})` }}
-                    ></div>
+                    >
+                      <div className="image-back" style={{ backgroundImage: `url(${post.image})` }}></div>
+                    </div>
                     <div className="post-inner">
                       <h3>{post.title}</h3>
                       <span>{post.format_date}</span>
