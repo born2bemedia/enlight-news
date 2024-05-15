@@ -15,6 +15,7 @@ export default function Home() {
       <CategoryPosts categoryTitle="Ethereum" category="Ethereum" />
       <HomeSubmit />
       <CategoryPosts categoryTitle="Blockchain" category="Blockchain" />
+      <CategoryPosts categoryTitle="All news" category="all" />
     </>
   );
 }

@@ -25,7 +25,7 @@ function Footer() {
             <Link href="/blockchain">Blockchain</Link>
             <Link href="/about-us">About us</Link>
             <Link href="#">Contact Us</Link>
-            <Link href="#">Submit topic</Link>
+            <Link href="/submit-topic">Submit topic</Link>
           </nav>
           <div className="footer-contacts">
             <Link href="mailto:info@enlight.news">

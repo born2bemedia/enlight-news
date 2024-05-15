@@ -1,9 +1,9 @@
 "use client";
-import ContactForm from "@/src/component/ContactForm";
+import GetForm from "@/src/component/GetForm";
 import { RevealWrapper, RevealList } from "next-reveal";
 import { useState } from "react";
 
-function QuickContactBlock() {
+function SubmitTopicBlock() {
   const [formSent, setFormSent] = useState(false);
 
   const handleFormReset = () => {
@@ -12,27 +12,24 @@ function QuickContactBlock() {
 
   return (
     <>
-      <section className="contact-block">
+      <section className="submit-block">
         <div className="_container">
           <RevealWrapper origin="bottom" delay={0}>
-            <h1>
-              Have a question? <br />
-              Submit your request!
-            </h1>
+            <h1>Submit topic</h1>
           </RevealWrapper>
           <RevealWrapper origin="bottom" delay={0}>
             <h3>
-              Encounter any challenges while setting up your dashboard or
-              customising modules? Need assistance getting started <br />
-              or choosing the perfect dashboard for your needs? Use our Quick
-              Contact form to submit your question directly to <br />a dedicated
-              specialist. Skip the general queue and get quick, personalised
-              support. Please follow the steps below.
+              Have a piece of news you think we should cover? Submit it here!
+              Our team will explore your suggestion, and if it <br />
+              aligns with our project's agenda and meets our standards, we'll
+              create and publish it in one of our sections. Fill out <br />
+              the form below, providing as many sources as possible to help us
+              gather maximum data about the case.
             </h3>
           </RevealWrapper>
-          <div className="contact-block__body">
+          <div className="submit-block__body">
             {!formSent ? (
-              <ContactForm handleFormReset={() => handleFormReset()} />
+              <GetForm handleFormReset={() => handleFormReset()} />
             ) : (
               <div className="form-sent">
                 <svg
@@ -64,4 +61,4 @@ function QuickContactBlock() {
   );
 }
 
-export default QuickContactBlock;
+export default SubmitTopicBlock;

@@ -75,7 +75,7 @@ function MobileMenu() {
         <Link href="/ethereum">Ethereum</Link>
         <Link href="/blockchain">Blockchain</Link>
         <Link href="/about-us">About us</Link>
-        <Link href="#">Submit topic</Link>
+        <Link href="/submit-topic">Submit topic</Link>
         <Link href="#">Contact Us</Link>
       </div>
     </>

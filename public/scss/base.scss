@@ -567,6 +567,7 @@ a {
         background: #97d80f;
         @media (max-width: 992px) {
           margin-top: 0;
+          width: 100%;
         }
         .main-button {
           &:before {
@@ -801,6 +802,21 @@ button {
         outline: none;
         .main-button {
           width: 100%;
+          @media (max-width:992px){
+            padding: 5px 24px 0 24px;
+            >span{
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              gap:24px;
+              svg{
+                position: relative;
+                right: unset;
+                bottom: unset;
+                margin-top: -5px;
+              }
+            }
+          }
         }
         @media (max-width: 992px) {
           width: 100%;
