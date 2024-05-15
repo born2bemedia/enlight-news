@@ -30,7 +30,7 @@ const WORDPRESS_API_URL = "https://cms.enlight.news/wp-json/custom/v1";
 } */
 
 export async function getPost(slug) {
-  const posts = await getPosts();
+  const posts = await getPosts("", "", "", 0);
   const post = posts.find((post) => post.slug === slug);
   //console.log(post);
   return post;

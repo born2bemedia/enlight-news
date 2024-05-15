@@ -7,6 +7,7 @@ import LatestPostCard from "@/src/component/LatestPostCard";
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getPost(slug);
+  console.log(post);
   return {
     title: post.seo_title,
     description: post.seo_description,
