@@ -14,7 +14,7 @@ export async function POST(request) {
       service: "gmail",
       auth: {
         user: "noreply@enlight.news", // Your Gmail email
-        pass: "jem5uqk_RMZ@muk!udv", // Your Gmail password or app password
+        pass: "qjm289ZbQQ346bQ=rfd", // Your Gmail password or app password
       },
       tls: {
         rejectUnauthorized: false // This bypasses the certificate validation
@@ -47,8 +47,10 @@ export async function POST(request) {
           <tr>
             <td style="padding: 40px">
               <h2 style="text-align: left; font-size: 20px">Dear ${email},</h2>
+              <p style="text-align: left; font-size: 16px; font-weight:600;">
+              Thank you for subscribing to Enlight News!
+              </p>
               <p style="text-align: left; font-size: 16px">
-              Thank you for subscribing to Enlight News!<br><br>
               You're now part of our community, and we're excited to have you on board. Shortly, you'll receive our first email, highlighting the top crypto news and the latest updates from the blockchain world.<br><br>
               Stay tuned for informative and insightful content delivered straight to your inbox!
 
@@ -65,7 +67,7 @@ export async function POST(request) {
           <tr>
             <td style="padding: 24px; background-color: #0E0E0E; color: #FFFFFF; font-size: 20px; text-align: center;">
               Thanks for using
-              <a href="https://enlight.news/" style="text-decoration: none; color: #97D80F; font-size: 20px;">Enlight.news</a>
+              <a href="https://enlight.news/" style="text-decoration: none; color: #97D80F; font-size: 20px;">Enlight.News</a>
             </td>
           </tr>
         </tfoot>

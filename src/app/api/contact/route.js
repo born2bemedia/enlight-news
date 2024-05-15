@@ -13,7 +13,7 @@ export async function POST(request) {
       service: "gmail",
       auth: {
         user: "noreply@enlight.news", // Your Gmail email
-        pass: "jem5uqk_RMZ@muk!udv", // Your Gmail password or app password
+        pass: "qjm289ZbQQ346bQ=rfd", // Your Gmail password or app password
       },
       tls: {
         rejectUnauthorized: false, // This bypasses the certificate validation

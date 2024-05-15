@@ -1,33 +1,14 @@
 export const CACHE_TAG_REVIEWS = "posts";
 
-const WORDPRESS_API_URL = "https://cms.enlight.news/wp-json/custom/v1";
+export const WORDPRESS_API_URL = "https://cms.enlight.news/wp-json/custom/v1";
 
-/*export async function getSlugs() {
-    const response = await fetch(`${WORDPRESS_API_URL}/posts`, {
-        next: {
-            tags: [CACHE_TAG_REVIEWS],
-        }
-    });
-    const data = await response.json();
-
-    if (!Array.isArray(data)) {
-        throw new Error("Unable to fetch slugs from WordPress API");
-    }
-
-    return data.map(post => post.slug);
-}*/
-
-/*export async function getPosts() {
-    const response = await fetch(`${WORDPRESS_API_URL}/posts`, {
-        next: {
-            tags: [CACHE_TAG_REVIEWS],
-        }
-    });
-    const data = await response.json();
-    
-    const posts = data.sort((a, b) => new Date(a.date).getTime() - new Date(b.date).getTime());
-    return posts; 
-} */
+export async function fetchPosts(url) {
+  const response = await fetch(url);
+  if (!response.ok) {
+    throw new Error('Failed to fetch posts');
+  }
+  return response.json();
+}
 
 export async function getPost(slug) {
   const posts = await getPosts("", "", "", 0);

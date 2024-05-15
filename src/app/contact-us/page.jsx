@@ -1,25 +1,28 @@
 import React from "react";
-import "@/public/scss/contact.scss";
+import "@/public/scss/contacts.scss";
 import ContactBlock from "./_components/ContactBlock";
 
 export const metadata = {
-  title: "Contact Us",
+  title: "Contact us | Enlight News",
   description:
-    "Contact the Enlight team if you have questions about our dashboard, its compatibility, integrations, and features. Our experts will assist you in choosing and setting up your perfect crypto marketing dashboard.",
+    "Enlight News is a go-to source for all news about crypto. Read the analytics on the latest crypto events. Contact us to suggest news, discuss cooperation, or give your feedback!",
   openGraph: {
-    title: "Contact Us",
+    title: "Contact us | Enlight News",
     description:
-      "Contact the Enlight team if you have questions about our dashboard, its compatibility, integrations, and features. Our experts will assist you in choosing and setting up your perfect crypto marketing dashboard.",
+      "Enlight News is a go-to source for all news about crypto. Read the analytics on the latest crypto events. Contact us to suggest news, discuss cooperation, or give your feedback!",
     images: "https://enlight.systems/images/meta.png",
   },
 };
 
-function QuickContact() {
+
+function ContactsPage() {
   return (
     <>
-      <ContactBlock />
+      <div className="dark">
+        <ContactBlock />
+      </div>
     </>
   );
 }
 
-export default QuickContact;
+export default ContactsPage;

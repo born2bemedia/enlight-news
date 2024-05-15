@@ -4,6 +4,7 @@ import Link from "next/link";
 import "@/public/scss/news.scss";
 import PostCard from "@/src/component/PostCard";
 
+
 export const metadata = {
   title: "Trending crypto news | Enlight News",
   description:
@@ -15,6 +16,8 @@ export const metadata = {
     images: "https://enlight.systems/images/meta.png",
   },
 };
+
+
 
 function parsePageParams(paramValue) {
   if (paramValue) {

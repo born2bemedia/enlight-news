@@ -5,8 +5,8 @@ export default async function handler(req, res) {
   console.log('Received method:', req.method);
   try {
     const payload = await req.json();
-    // You can add conditions here to check for specific events in the payload
-    // e.g., only revalidate on certain types of updates
+    
+    
     await revalidateTag(CACHE_TAG_REVIEWS);
     console.log("Cache revalidation triggered for:", CACHE_TAG_REVIEWS);
     return res.status(204).end(); // Send an empty response with 204 No Content status
