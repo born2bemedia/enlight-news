@@ -12,7 +12,7 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "noreply@enlight.systems", // Your Gmail email
+        user: "noreply@enlight.news", // Your Gmail email
         pass: "jem5uqk_RMZ@muk!udv", // Your Gmail password or app password
       },
       tls: {
@@ -32,8 +32,8 @@ export async function POST(request) {
     }
 
     const mailOptions = {
-      from: '"Enlight Systems" <noreply@enlight.systems>', // Sender address
-      to: "noreply@enlight.systems", // Change to your recipient's email
+      from: '"Enlight Systems" <noreply@enlight.news>', // Sender address
+      to: "noreply@enlight.news", // Change to your recipient's email
       subject: "Crypto marketing assistance request",
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nMessanger: ${messanger}\nNeed assistance with: ${assistance}\nProblem: ${problem}\nReply: ${reply}\n`,
       attachments: attachments,
@@ -88,7 +88,7 @@ export async function POST(request) {
   `;
 
     const mailOptionsUser = {
-      from: '"Enlight Systems" <noreply@enlight.systems>', // Sender address
+      from: '"Enlight Systems" <noreply@enlight.news>', // Sender address
       to: email, // Change to your recipient's email
       subject: "Your Request Has Been Received",
       html: htmlEmail,

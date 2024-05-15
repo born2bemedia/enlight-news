@@ -11,7 +11,7 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "noreply@enlight.systems", // Your Gmail email
+        user: "noreply@enlight.news", // Your Gmail email
         pass: "jem5uqk_RMZ@muk!udv", // Your Gmail password or app password
       },
       tls: {
@@ -20,8 +20,8 @@ export async function POST(request) {
     });
 
     const mailOptions = {
-      from: '"Enlight News" <noreply@enlight.systems>', // Sender address
-      to: "noreply@enlight.systems", // Change to your recipient's email
+      from: '"Enlight News" <noreply@enlight.news>', // Sender address
+      to: "noreply@enlight.news", // Change to your recipient's email
       subject: "New topic",
       text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject Type: ${projectType}\nProject Description: ${projectDescription}\nCurrent Challenges: ${currentChallenges}\n`,
     };
@@ -36,7 +36,7 @@ export async function POST(request) {
         <thead>
           <tr>
             <td>
-              <img style="width: 100%" src="https://enlight.systems/images/email-head.png" />
+              <img style="width: 100%" src="https://enlight.news/images/email-head.png" />
             </td>
           </tr>
         </thead>
@@ -45,16 +45,15 @@ export async function POST(request) {
             <td style="padding: 40px">
               <h2 style="text-align: left; font-size: 20px">Dear ${name},</h2>
               <p style="text-align: left; font-size: 16px">
-                 Thank you for reaching out to us! We have received your request to get started with Enlight, and we're thrilled to assist you. Our team is currently reviewing your request, and we'll be in touch with you shortly to discuss the next steps and get you started with our services.<br><br>
+              Thank you for subscribing to Enlight News!<br><br>
+              You're now part of our community, and we're excited to have you on board. Shortly, you'll receive our first email, highlighting the top crypto news and the latest updates from the blockchain world.<br><br>
+              Stay tuned for informative and insightful content delivered straight to your inbox!
 
-                  If you have any urgent questions or concerns, please feel free to contact us at <a href="mailto:info@enlight.systems">info@enlight.systems</a>.<br><br>
-
-                  We appreciate your interest in Enlight, and we look forward to working with you!
               </p>
               
               <h2 style="text-align: left; font-size: 16px">
                   Best regards,<br />
-                  Enlight Team
+                  Enlight News Team
               </h2>
             </td>
           </tr>
@@ -63,7 +62,7 @@ export async function POST(request) {
           <tr>
             <td style="padding: 24px; background-color: #0E0E0E; color: #FFFFFF; font-size: 20px; text-align: center;">
               Thanks for using
-              <a href="https://Enlight.systems" style="text-decoration: none; color: #97D80F; font-size: 20px;">Enlight.systems</a>
+              <a href="https://enlight.news/" style="text-decoration: none; color: #97D80F; font-size: 20px;">Enlight.news</a>
             </td>
           </tr>
         </tfoot>
@@ -73,7 +72,7 @@ export async function POST(request) {
   `;
 
     const mailOptionsUser = {
-      from: '"Enlight News" <noreply@enlight.systems>', // Sender address
+      from: '"Enlight News" <noreply@enlight.news>', // Sender address
       to: email, // Change to your recipient's email
       subject: "Getting Started Request Received",
       html: htmlEmail,

