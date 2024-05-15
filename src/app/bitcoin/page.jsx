@@ -30,7 +30,7 @@ async function BitcoinPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
   const posts = await getPosts(page, 4, "Bitcoin", "");
   const pageCount = await getPageCount("Bitcoin");
-  console.log(pageCount);
+  //console.log(pageCount);
   return (
     <>
       <section className="news-wrap">

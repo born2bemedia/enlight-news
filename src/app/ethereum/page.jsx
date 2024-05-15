@@ -30,7 +30,7 @@ async function EthereumPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
   const posts = await getPosts(page, 4, "Ethereum", "");
   const pageCount = await getPageCount("Ethereum");
-  console.log(pageCount);
+  //console.log(pageCount);
   return (
     <>
       <section className="news-wrap">

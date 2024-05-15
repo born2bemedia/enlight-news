@@ -30,7 +30,7 @@ async function BlockchainPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
   const posts = await getPosts(page, 4, "Blockchain", "");
   const pageCount = await getPageCount("Blockchain");
-  console.log(pageCount);
+  //console.log(pageCount);
   return (
     <>
       <section className="news-wrap">

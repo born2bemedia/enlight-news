@@ -25,7 +25,7 @@ const handleSubmit = async (
       },
       body: JSON.stringify(values),
     });
-    console.log(JSON.stringify(values));
+    //console.log(JSON.stringify(values));
     if (response.ok) {
       resetForm();
       setStatus({ success: true });

@@ -30,7 +30,7 @@ async function TrendingPage({ searchParams }) {
   const page = parsePageParams(searchParams.page);
   const posts = await getPosts(page, 4, "Trending", "");
   const pageCount = await getPageCount("Trending");
-  console.log(pageCount);
+  //console.log(pageCount);
   return (
     <>
       <section className="news-wrap">

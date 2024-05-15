@@ -86,7 +86,7 @@ const handleSubmit = async (
       },
       body: JSON.stringify(payload),
     });
-    console.log(JSON.stringify(payload));
+    //console.log(JSON.stringify(payload));
     if (response.ok) {
       resetForm();
       setStatus({ success: true });
