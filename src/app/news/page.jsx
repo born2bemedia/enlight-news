@@ -12,7 +12,7 @@ export const metadata = {
     title: "All crypto news | Enlight News",
     description:
       "Stay up-to-date on crypto market news with Enlight .news - Analysis and expert insights on Bitcoin, Ethereum, Blockchain, regulations, and compliance.",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

@@ -10,7 +10,7 @@ export const metadata = {
     title: "Contact us | Enlight News",
     description:
       "Enlight News is a go-to source for all news about crypto. Read the analytics on the latest crypto events. Contact us to suggest news, discuss cooperation, or give your feedback!",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

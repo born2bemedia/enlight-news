@@ -12,7 +12,7 @@ export const metadata = {
     title: "Bitcoin news | Enlight News",
     description:
       "Explore the latest Bitcoin news, including price shifts, events, and changes impacting the cryptocurrency. We analyse market sentiment for you.",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

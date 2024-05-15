@@ -21,7 +21,7 @@ export const metadata = {
     },
     description:
       "Explore the latest crypto market news, get expert insights, and read opinions. We closely monitor the market to keep you informed!",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

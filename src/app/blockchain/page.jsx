@@ -12,7 +12,7 @@ export const metadata = {
     title: "Blockchain news | Enlight News",
     description:
       "Explore the latest blockchain news - technology innovations that impact the crypto market. We monitor the market for you.",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

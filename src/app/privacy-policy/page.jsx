@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "Privacy Policy",
     description: "Privacy Policy",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

@@ -15,7 +15,7 @@ export const metadata = {
     title: "About us | Enlight News",
     description:
       "Enlight News strives to deliver unbiased, informative news, analysis, research, and education for the crypto community. It is your go-to source of crypto news.",
-    images: "https://enlight.systems/images/meta.png",
+    images: "https://enlight.news/images/meta.png",
   },
 };
 

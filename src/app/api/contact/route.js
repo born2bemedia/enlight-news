@@ -49,7 +49,7 @@ export async function POST(request) {
         <thead>
           <tr>
             <td>
-              <img style="width: 100%" src="https://enlight.systems/images/email-head.png" />
+              <img style="width: 100%" src="https://enlight.news/images/email-head.png" />
             </td>
           </tr>
         </thead>
