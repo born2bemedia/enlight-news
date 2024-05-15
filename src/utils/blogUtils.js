@@ -27,6 +27,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   const response = await fetch(url, {
     next: {
       tags: ["blog"],
+      revalidate: 60,
     },
   });
   //console.log(url);
@@ -38,15 +39,6 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   return posts;
 }
 
-export async function getPage(pageId) {
-  const response = await fetch(`${apiUrl}/page/${pageId}`, {
-    next: {
-      tags: ["blog"],
-    },
-  });
-  const page = await response.json();
-  return page;
-}
 
 export async function getPageCount(category = "") {
   let url = `${apiUrl}/posts?`;
@@ -55,6 +47,7 @@ export async function getPageCount(category = "") {
   const response = await fetch(url, {
     next: {
       tags: ["blog"],
+      revalidate: 60,
     },
   });
   const data = await response.json();
