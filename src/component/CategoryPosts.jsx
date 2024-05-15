@@ -6,14 +6,13 @@ import PostCard from "./PostCard";
 async function CategoryPosts({ categoryTitle, category }) {
   let categoryPosts;
   let url;
-  if(category == 'all'){
+  if (category == "all") {
     categoryPosts = await getPosts("", 3, "", 0);
     url = "news";
   } else {
     categoryPosts = await getPosts("", 3, category, 0);
     url = category.toLowerCase();
   }
-
 
   return (
     <section className="category-wrap">
@@ -41,7 +40,20 @@ async function CategoryPosts({ categoryTitle, category }) {
         </div>
         <div className="category-wrap__body">
           {categoryPosts.map((post) => (
-            <PostCard key={post.slug} postObject={post} />
+            <Link
+              key={post.slug}
+              href={`/news/${post.slug}`}
+              className="featured-post"
+            >
+              <div
+                className="post-thumb"
+                style={{ backgroundImage: `url(${post.image})` }}
+              ></div>
+              <div className="post-inner">
+                <h3>{post.title}</h3>
+                <span>{post.format_date}</span>
+              </div>
+            </Link>
           ))}
         </div>
       </div>
