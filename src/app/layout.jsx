@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={epilogue.className}>
-        <GoogleAnalytics gaId="G-N1SFZ1RDHK" />
+        <GoogleAnalytics gaId="G-7EDX1FY1BL" />
         <Preloader/>
         <Header />
         <main>{children}</main>
