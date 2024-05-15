@@ -23,7 +23,7 @@ export async function POST(request) {
       from: '"Enlight News" <noreply@enlight.news>', // Sender address
       to: "noreply@enlight.news", // Change to your recipient's email
       subject: "New topic",
-      text: `Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nProject Type: ${projectType}\nProject Description: ${projectDescription}\nCurrent Challenges: ${currentChallenges}\n`,
+      text: `Name: ${name}\nEmail: ${email}\nNews Topic: ${newsTopic}\nSources: ${sources}\nAdditional Comments: ${additionalComments}`,
     };
 
     // Send email
