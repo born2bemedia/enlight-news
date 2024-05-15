@@ -40,20 +40,22 @@ async function CategoryPosts({ categoryTitle, category }) {
         </div>
         <div className="category-wrap__body">
           {categoryPosts.map((post) => (
-            <Link
-              key={post.slug}
-              href={`/news/${post.slug}`}
-              className="featured-post"
-            >
-              <div
-                className="post-thumb"
-                style={{ backgroundImage: `url(${post.image})` }}
-              ></div>
-              <div className="post-inner">
-                <h3>{post.title}</h3>
-                <span>{post.format_date}</span>
-              </div>
-            </Link>
+            <div>
+              <Link
+                key={post.slug}
+                href={`/news/${post.slug}`}
+                className="featured-post"
+              >
+                <div
+                  className="post-thumb"
+                  style={{ backgroundImage: `url(${post.image})` }}
+                ></div>
+                <div className="post-inner">
+                  <h3>{post.title}</h3>
+                  <span>{post.format_date}</span>
+                </div>
+              </Link>
+            </div>
           ))}
         </div>
       </div>
