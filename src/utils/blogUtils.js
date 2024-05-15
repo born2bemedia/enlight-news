@@ -1,4 +1,4 @@
-const apiUrl = process.env.NEXT_PUBLIC_apiUrl;
+const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
 
 export async function fetchPosts(url) {
   const response = await fetch(url);
