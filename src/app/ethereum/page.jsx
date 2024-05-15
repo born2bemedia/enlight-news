@@ -54,7 +54,7 @@ async function EthereumPage({ searchParams }) {
               {page >= 2 && (
                 <Link
                   className="arrow"
-                  href={`/news/?page=${page - 1}`}
+                  href={`/ethereum/?page=${page - 1}`}
                   title="prev-page"
                 >
                   <svg
@@ -84,7 +84,7 @@ async function EthereumPage({ searchParams }) {
                 <Link
                   className={index + 1 == page ? "active" : ""}
                   key={index + 1}
-                  href={`/news/?page=${index + 1}`}
+                  href={`/ethereum/?page=${index + 1}`}
                   title={index + 1}
                 >
                   {index + 1}
@@ -93,7 +93,7 @@ async function EthereumPage({ searchParams }) {
               {page !== pageCount && (
                 <Link
                   className="arrow"
-                  href={`/news/?page=${page + 1}`}
+                  href={`/ethereum/?page=${page + 1}`}
                   title="next-page"
                 >
                   <svg

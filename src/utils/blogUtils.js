@@ -50,7 +50,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
       tags: [CACHE_TAG_REVIEWS],
     },
   });
-  console.log(url);
+  //console.log(url);
   const data = await response.json();
   //console.log(data);
   const posts = data.sort(
@@ -82,6 +82,6 @@ export async function getPageCount(category = "") {
   const posts = data.sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
-  const pageCount = Math.ceil(posts.length / 7);
+  const pageCount = Math.ceil(posts.length / 4);
   return pageCount;
 }

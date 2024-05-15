@@ -55,7 +55,7 @@ async function BitcoinPage({ searchParams }) {
               {page >= 2 && (
                 <Link
                   className="arrow"
-                  href={`/news/?page=${page - 1}`}
+                  href={`/bitcoin/?page=${page - 1}`}
                   title="prev-page"
                 >
                   <svg
@@ -85,7 +85,7 @@ async function BitcoinPage({ searchParams }) {
                 <Link
                   className={index + 1 == page ? "active" : ""}
                   key={index + 1}
-                  href={`/news/?page=${index + 1}`}
+                  href={`/bitcoin/?page=${index + 1}`}
                   title={index + 1}
                 >
                   {index + 1}
@@ -94,7 +94,7 @@ async function BitcoinPage({ searchParams }) {
               {page !== pageCount && (
                 <Link
                   className="arrow"
-                  href={`/news/?page=${page + 1}`}
+                  href={`/bitcoin/?page=${page + 1}`}
                   title="next-page"
                 >
                   <svg
