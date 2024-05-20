@@ -59,7 +59,7 @@ function Footer() {
               </svg>
               <span>info@enlight.news</span>
             </Link>
-            <Link href="tel:">
+            <Link href="tel:+447458149408">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -80,7 +80,7 @@ function Footer() {
                   fill="#97D80F"
                 />
               </svg>
-              <span>Phone</span>
+              <span>+44 745 814 94 08</span>
             </Link>
             <Link href="#">
               <svg
@@ -112,7 +112,8 @@ function Footer() {
                 </defs>
               </svg>
               <span>
-                <b>Registered address:</b>
+                <b>Registered address:</b> Rooms 1703-1704, 17/F, Tung Chiu
+                Commercial Centre, 193 Lockhart Road, Wanchai, Hong Kong
               </span>
             </Link>
           </div>

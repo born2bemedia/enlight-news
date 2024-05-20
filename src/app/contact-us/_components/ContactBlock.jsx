@@ -69,7 +69,7 @@ function ContactBlock() {
                 <span>Email: </span>info@enlight.business
               </span>
             </Link>
-            <Link href="tel:#">
+            <Link href="tel:+447458149408">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -91,7 +91,7 @@ function ContactBlock() {
                 />
               </svg>
               <span>
-                <span>Phone: </span>Phone
+                <span>Phone: </span>+44 745 814 94 08
               </span>
             </Link>
 
@@ -116,7 +116,10 @@ function ContactBlock() {
                 <span>Address: </span>
               </span>
             </Link>
-            <p>Address</p>
+            <p>
+              Rooms 1703-1704, 17/F, Tung Chiu Commercial Centre, 193 Lockhart
+              Road, Wanchai, Hong Kong
+            </p>
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.9865063466395!2d114.17189917511763!3d22.27850097970229!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3404005b91e96cbb%3A0x2f4771b67527c85e!2sTung%20Chiu%20Commercial%20Centre!5e0!3m2!1sen!2sua!4v1713946938566!5m2!1sen!2sua"
               width="600"
@@ -145,10 +148,11 @@ function ContactBlock() {
                     />
                   </svg>
                   <h2>
-                  You have subscribed <br/>to our newsletter successfully!
+                    You have subscribed <br />
+                    to our newsletter successfully!
                   </h2>
                   <p>
-                  Please check your inbox for a greeting email from Enlight!
+                    Please check your inbox for a greeting email from Enlight!
                   </p>
                 </div>
               )}
