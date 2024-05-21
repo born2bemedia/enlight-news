@@ -7,14 +7,16 @@ function Footer() {
     <footer>
       <div className="_container">
         <div className="footer-top">
-          <div>
-            <Link href="/">
-              <img alt="logo" src="/logo.svg" />
-            </Link>
-            <p>
-              Stay Enlightened. Your go-to source for all things crypto: news,
-              marketing, and regulations.
-            </p>
+          <div class="foter-left">
+            <div>
+              <Link href="/">
+                <img alt="logo" src="/logo.svg" />
+              </Link>
+              <p>
+                Stay Enlightened. Your go-to source for all things crypto: news,
+                marketing, and regulations.
+              </p>
+            </div>
             <div className="soc">
               <Link
                 href="https://www.facebook.com/enlight.facebook"
