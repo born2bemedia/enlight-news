@@ -160,14 +160,11 @@ function ContactBlock() {
             <div className="right-bottom">
               <p>Join us on social media</p>
               <div className="soc">
-                <Link href="#" target="_blank">
-                  <img src="/images/soc-temp.svg" />
+                <Link href="https://www.facebook.com/enlight.facebook" target="_blank">
+                  <img src="/images/fb.svg" />
                 </Link>
-                <Link href="#" target="_blank">
-                  <img src="/images/soc-temp.svg" />
-                </Link>
-                <Link href="#" target="_blank">
-                  <img src="/images/soc-temp.svg" />
+                <Link href="https://www.linkedin.com/company/enlight-linkedin/" target="_blank">
+                  <img src="/images/in.svg" />
                 </Link>
               </div>
             </div>

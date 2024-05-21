@@ -15,6 +15,20 @@ function Footer() {
               Stay Enlightened. Your go-to source for all things crypto: news,
               marketing, and regulations.
             </p>
+            <div className="soc">
+              <Link
+                href="https://www.facebook.com/enlight.facebook"
+                target="_blank"
+              >
+                <img src="/images/fb.svg" />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/company/enlight-linkedin/"
+                target="_blank"
+              >
+                <img src="/images/in.svg" />
+              </Link>
+            </div>
           </div>
           <nav>
             <Link href="/">Main page</Link>
