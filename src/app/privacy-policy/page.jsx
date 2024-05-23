@@ -27,7 +27,7 @@ function PrivacyPage() {
             <article>
               <p>
                 This Privacy Policy statement is presented by Enlight News
-                (Marketera HK), collectively referred to as "Enlight News,"
+                (Marketera Limited), collectively referred to as "Enlight News,"
                 "we," "us," or "our."
               </p>
               <h2>

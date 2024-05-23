@@ -27,8 +27,8 @@ function TermsPage() {
             <article>
               <p>
                 This is an agreement between you or the entity that you
-                represent (hereinafter "you" or "your") and Marketera HK
-                (hereinafter "Marketera HK"), governing your use of Enlight News
+                represent (hereinafter "you" or "your") and Marketera Limited
+                (hereinafter "Marketera Limited"), governing your use of Enlight News
                 (<a href="http://enlight.news/">http://enlight.news/</a>).
               </p>
               <h2>
