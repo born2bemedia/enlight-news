@@ -2,6 +2,7 @@ import React from "react";
 import { getPosts } from "@/src/utils/blogUtils";
 import Link from "next/link";
 import PostCard from "./PostCard";
+import Image from "next/image";
 
 async function CategoryPosts({ categoryTitle, category }) {
   let categoryPosts;
@@ -46,11 +47,15 @@ async function CategoryPosts({ categoryTitle, category }) {
                 href={`/news/${post.slug}`}
                 className="featured-post"
               >
-                <div
-                  className="post-thumb"
-                 
-                >
-                  <div className="image-back" style={{ backgroundImage: `url(${post.image})` }}></div>
+                <div className="post-thumb">
+                  <Image
+                    src={post.image}
+                    fill={true}
+                    placeholder="blur"
+                    className="image-back"
+                    style={{ objectFit: "cover" }}
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8c+dRPQAIUQMbPYh0TwAAAABJRU5ErkJggg=="
+                  />
                 </div>
                 <div className="post-inner">
                   <h3>{post.title}</h3>

@@ -4,6 +4,7 @@ import "@/public/scss/news.scss";
 import Link from "next/link";
 import CategoryPosts from "@/src/component/CategoryPosts";
 import LatestPostCard from "@/src/component/LatestPostCard";
+import Image from "next/image";
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getPost(slug);
@@ -44,10 +45,15 @@ async function SingleNews({ params: { slug } }) {
                     href={`/news/${post.slug}`}
                     className="featured-post"
                   >
-                    <div
-                      className="post-thumb"
-                    >
-                      <div className="image-back" style={{ backgroundImage: `url(${post.image})` }}></div>
+                    <div className="post-thumb">
+                      <Image
+                        src={post.image}
+                        fill={true}
+                        placeholder="blur"
+                        className="image-back"
+                        style={{ objectFit: "cover" }}
+                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8c+dRPQAIUQMbPYh0TwAAAABJRU5ErkJggg=="
+                      />
                     </div>
                     <div className="post-inner">
                       <h3>{post.title}</h3>
