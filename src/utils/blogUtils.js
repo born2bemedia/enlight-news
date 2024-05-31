@@ -32,7 +32,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   });
   //console.log(url);
   const data = await response.json();
-  console.log(data);
+  //console.log(data);
   const posts = data;
   return posts;
 }

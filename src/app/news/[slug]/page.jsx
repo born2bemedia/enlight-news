@@ -30,7 +30,16 @@ async function SingleNews({ params: { slug } }) {
           <div className="_container">
             <div className="post-first__body">
               <div className="post-first__col-01">
-                <img src={post.image} />
+                <div className="post-thumb">
+                  <Image
+                    src={post.image}
+                    fill={true}
+                    placeholder="blur"
+                    className="image-back"
+                    style={{ objectFit: "cover" }}
+                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8c+dRPQAIUQMbPYh0TwAAAABJRU5ErkJggg=="
+                  />
+                </div>
                 <div className="post-content">
                   <h1>{post.title}</h1>
                   <span>{post.format_date}</span>

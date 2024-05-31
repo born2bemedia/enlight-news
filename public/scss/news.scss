@@ -34,9 +34,18 @@
     @media (max-width: 992px) {
       width: 100%;
     }
-    img {
+    .post-thumb{
       width: 100%;
+      position: relative;
+      height: 500px;
+      @media (max-width: 992px) {
+        height: 300px;
+      }
+      @media (max-width: 767px) {
+        height: 200px;
+      }
     }
+    
     .post-content {
       background: #dcdce2;
       padding: 64px 40px;
