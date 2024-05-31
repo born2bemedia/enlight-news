@@ -27,7 +27,7 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   const response = await fetch(url, {
     next: {
       tags: ["blog"],
-      revalidate: 60,
+      revalidate: 200,
     },
   });
   //console.log(url);
@@ -45,7 +45,7 @@ export async function getPageCount(category = "") {
   const response = await fetch(url, {
     next: {
       tags: ["blog"],
-      revalidate: 60,
+      revalidate: 200,
     },
   });
   const data = await response.json();
