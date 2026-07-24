@@ -3,7 +3,6 @@ import { getPosts, getPost } from "@/src/utils/blogUtils";
 import "@/public/scss/news.scss";
 import Link from "next/link";
 import CategoryPosts from "@/src/component/CategoryPosts";
-import LatestPostCard from "@/src/component/LatestPostCard";
 import Image from "next/image";
 
 export async function generateMetadata({ params: { slug } }) {
@@ -22,7 +21,9 @@ export async function generateMetadata({ params: { slug } }) {
 
 async function SingleNews({ params: { slug } }) {
   const post = await getPost(slug);
-  const trendingPosts = await getPosts("", 3, "Trending", 0);
+  const trendingPosts = (await getPosts("", 4, "Trending", 0))
+    .filter((item) => item.slug !== slug)
+    .slice(0, 3);
   return (
     <>
       <div className="single-post">
@@ -41,8 +42,15 @@ async function SingleNews({ params: { slug } }) {
                   />
                 </div>
                 <div className="post-content">
-                  <h1>{post.title}</h1>
-                  <span>{post.format_date}</span>
+                  <div className="post-header">
+                    <h1>{post.title}</h1>
+                    <div className="post-meta">
+                      <span>{post.format_date}</span>
+                      {(post.label || post.categories?.[0]) && (
+                        <span>{post.label || post.categories[0]}</span>
+                      )}
+                    </div>
+                  </div>
                   <article dangerouslySetInnerHTML={{ __html: post.body }} />
                 </div>
               </div>
@@ -77,6 +85,7 @@ async function SingleNews({ params: { slug } }) {
         <CategoryPosts
           categoryTitle={"Related news"}
           category={post.categories[0]}
+          excludeSlug={slug}
         />
       </div>
     </>

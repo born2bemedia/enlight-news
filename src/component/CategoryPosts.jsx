@@ -4,16 +4,21 @@ import Link from "next/link";
 import PostCard from "./PostCard";
 import Image from "next/image";
 
-async function CategoryPosts({ categoryTitle, category }) {
+async function CategoryPosts({ categoryTitle, category, excludeSlug }) {
   let categoryPosts;
   let url;
   if (category == "all") {
-    categoryPosts = await getPosts("", 3, "", 0);
+    categoryPosts = await getPosts("", 6, "", 0);
     url = "news";
   } else {
-    categoryPosts = await getPosts("", 3, category, 0);
+    categoryPosts = await getPosts("", 6, category, 0);
     url = category.toLowerCase();
   }
+
+  if (excludeSlug) {
+    categoryPosts = categoryPosts.filter((post) => post.slug !== excludeSlug);
+  }
+  categoryPosts = categoryPosts.slice(0, 3);
 
   return (
     <section className="category-wrap">
