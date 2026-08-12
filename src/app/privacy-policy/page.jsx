@@ -164,6 +164,23 @@ function PrivacyPage() {
                 </li>
               </ul>
               <h2>
+                <strong>Third-Party Market Data Services</strong>
+              </h2>
+              <p>
+                The Website may integrate cryptocurrency market data, pricing
+                charts and similar informational widgets provided by third-party
+                service providers. These services are intended solely to display
+                publicly available market information.
+              </p>
+              <p>
+                Enlight News does not transmit personal information to these
+                providers beyond what is technically necessary to display their
+                content. Users should be aware that third-party providers may
+                process technical information, such as IP addresses or
+                browser-related data, in accordance with their own privacy
+                policies.
+              </p>
+              <h2>
                 <strong>
                   Legal bases for collecting and using information
                 </strong>
