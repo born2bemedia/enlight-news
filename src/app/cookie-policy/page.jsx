@@ -87,6 +87,21 @@ function PrivacyPage() {
                 </li>
               </ol>
               <h2>
+                <strong>Third-Party Market Widgets</strong>
+              </h2>
+              <p>
+                Some pages of the Website display cryptocurrency market data,
+                charts and pricing information supplied by third-party
+                providers. These services may use cookies or similar
+                technologies that are necessary to deliver market information or
+                improve the performance of their widgets.
+              </p>
+              <p>
+                Any cookies set by third-party providers are governed by their
+                respective privacy and cookie policies, over which Enlight News
+                has no control.
+              </p>
+              <h2>
                 <strong>How to control cookies</strong>
               </h2>
               <p>
