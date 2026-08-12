@@ -111,6 +111,31 @@ function TermsPage() {
                 any illegal or unauthorised activities.
               </p>
               <h2>
+                <strong>Third-Party Market Data</strong>
+              </h2>
+              <p>
+                Enlight News may display cryptocurrency prices, market charts,
+                market capitalisation data and other financial information
+                provided by independent third-party data providers.
+              </p>
+              <p>
+                While we strive to integrate reputable sources, Enlight News
+                does not create, verify, monitor or control the accuracy,
+                completeness, timeliness or availability of such information.
+                Market data is provided for general informational purposes only
+                and may be delayed, incomplete or inaccurate.
+              </p>
+              <p>
+                Enlight News shall not be liable for any loss, damage or decision
+                resulting from reliance on third-party market data displayed on
+                the Website. Users should independently verify any information
+                before making financial, business or investment decisions.
+              </p>
+              <p>
+                The availability, functionality and content of third-party
+                market data services may change without prior notice.
+              </p>
+              <h2>
                 <strong>Privacy and Personal Information</strong>
               </h2>
               <p>
