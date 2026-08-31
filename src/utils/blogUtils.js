@@ -14,6 +14,15 @@ function resolveLocalImage(image) {
   return `/images/resources/${image}`;
 }
 
+// Next.js image optimizer 500s on CMS webp; Figma heroes are stored locally.
+function resolveCmsImage(image) {
+  if (!image || typeof image !== "string") return image;
+  const match = image.match(/News-?(\d+)\.(?:webp|png|jpe?g)$/i);
+  if (!match) return image;
+  const n = String(match[1]).padStart(2, "0");
+  return `/images/news/news-${n}.png`;
+}
+
 async function getLocalPosts() {
   let files = [];
   try {
@@ -78,7 +87,10 @@ async function getMergedPosts(category = "") {
 
   const bySlug = new Map();
   for (const post of wpPosts) {
-    bySlug.set(post.slug, post);
+    bySlug.set(post.slug, {
+      ...post,
+      image: resolveCmsImage(post.image),
+    });
   }
   for (const post of localPosts) {
     bySlug.set(post.slug, post);
@@ -131,7 +143,8 @@ export async function getPosts(page = 1, perPage = 4, category = "", offset) {
   return posts.slice(start, start + limit);
 }
 
-export async function getPageCount(category = "") {
+export async function getPageCount(category = "", perPage = 4) {
   const posts = await getMergedPosts(category);
-  return Math.ceil(posts.length / 4);
+  const limit = Number(perPage) || 4;
+  return Math.ceil(posts.length / limit);
 }

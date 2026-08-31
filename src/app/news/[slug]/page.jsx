@@ -1,13 +1,20 @@
 import React from "react";
-import { getPosts, getPost } from "@/src/utils/blogUtils";
-import "@/public/scss/news.scss";
-import Link from "next/link";
-import CategoryPosts from "@/src/component/CategoryPosts";
 import Image from "next/image";
+import { notFound } from "next/navigation";
+import { getPosts, getPost } from "@/src/utils/blogUtils";
+import { BLUR_DATA_URL, IMAGE_QUALITY } from "@/src/component/ui/imagePlaceholder";
+import BackButton from "@/src/component/ui/BackButton";
+import ShareBar from "@/src/component/ui/ShareBar";
+import SidebarArticle from "@/src/component/ui/SidebarArticle";
+import RelatedNews from "@/src/component/article/RelatedNews";
+import ArticleCta from "@/src/component/article/ArticleCta";
+import "@/public/scss/news.scss";
 
 export async function generateMetadata({ params: { slug } }) {
   const post = await getPost(slug);
-  //console.log(post);
+  if (!post) {
+    return { title: "Article not found | Enlight News" };
+  }
   return {
     title: post.seo_title,
     description: post.seo_description,
@@ -21,74 +28,67 @@ export async function generateMetadata({ params: { slug } }) {
 
 async function SingleNews({ params: { slug } }) {
   const post = await getPost(slug);
+  if (!post) notFound();
+
   const trendingPosts = (await getPosts("", 4, "Trending", 0))
     .filter((item) => item.slug !== slug)
     .slice(0, 3);
+
+  const shareUrl = `https://enlight.news/news/${slug}`;
+  const category = post.categories?.[0] || "";
+
   return (
-    <>
-      <div className="single-post">
-        <section className="post-first">
-          <div className="_container">
-            <div className="post-first__body">
-              <div className="post-first__col-01">
-                <div className="post-thumb">
-                  <Image
-                    src={post.image}
-                    fill={true}
-                    placeholder="blur"
-                    className="image-back"
-                    style={{ objectFit: "cover" }}
-                    blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8c+dRPQAIUQMbPYh0TwAAAABJRU5ErkJggg=="
-                  />
-                </div>
-                <div className="post-content">
-                  <div className="post-header">
-                    <h1>{post.title}</h1>
-                    <div className="post-meta">
-                      <span>{post.format_date}</span>
-                      {(post.label || post.categories?.[0]) && (
-                        <span>{post.label || post.categories[0]}</span>
-                      )}
-                    </div>
-                  </div>
-                  <article dangerouslySetInnerHTML={{ __html: post.body }} />
-                </div>
-              </div>
-              <div className="post-first__col-02">
-                <h2>Trending</h2>
-                {trendingPosts.map((post) => (
-                  <Link
-                    key={post.slug}
-                    href={`/news/${post.slug}`}
-                    className="featured-post"
-                  >
-                    <div className="post-thumb">
-                      <Image
-                        src={post.image}
-                        fill={true}
-                        placeholder="blur"
-                        className="image-back"
-                        style={{ objectFit: "cover" }}
-                        blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mO8c+dRPQAIUQMbPYh0TwAAAABJRU5ErkJggg=="
-                      />
-                    </div>
-                    <div className="post-inner">
-                      <h3>{post.title}</h3>
-                      <span>{post.format_date}</span>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </div>
+    <div className="article-page">
+      <section className="article-hero">
+        <div className="article-hero__head">
+          <BackButton />
+          <div className="article-hero__title-row">
+            <h1>{post.title}</h1>
+            <ShareBar
+              date={post.format_date}
+              url={shareUrl}
+              title={post.title}
+            />
           </div>
-        </section>
-        <CategoryPosts
-          categoryTitle={"Related news"}
-          category={post.categories[0]}
-          excludeSlug={slug}
+        </div>
+        {post.image && (
+          <div className="article-hero__image">
+            <Image
+              src={post.image}
+              alt=""
+              fill
+              sizes="100vw"
+              quality={IMAGE_QUALITY}
+              unoptimized
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
+              style={{ objectFit: "cover" }}
+              priority
+            />
+          </div>
+        )}
+      </section>
+
+      <section className="article-main">
+        <article
+          className="article-body"
+          dangerouslySetInnerHTML={{ __html: post.body }}
         />
-      </div>
-    </>
+        {trendingPosts.length > 0 && (
+          <aside className="article-trending">
+            <p className="article-trending__title">Trending</p>
+            <div className="article-trending__list">
+              {trendingPosts.map((item) => (
+                <SidebarArticle key={item.slug} post={item} />
+              ))}
+            </div>
+          </aside>
+        )}
+      </section>
+
+      <RelatedNews category={category} excludeSlug={slug} />
+      <ArticleCta />
+    </div>
   );
 }
 

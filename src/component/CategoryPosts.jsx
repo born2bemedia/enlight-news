@@ -56,6 +56,8 @@ async function CategoryPosts({ categoryTitle, category, excludeSlug }) {
                   <Image
                     src={post.image}
                     fill={true}
+                    quality={100}
+                    unoptimized
                     placeholder="blur"
                     className="image-back"
                     style={{ objectFit: "cover" }}

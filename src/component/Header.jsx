@@ -1,32 +1,55 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import "@/public/scss/header.scss";
-import MobileMenu from "./MobileMenu";
+import SiteMenu from "./SiteMenu";
+import HeaderNav from "./HeaderNav";
+
+const INK_PREFIXES = [
+  "/trending",
+  "/bitcoin",
+  "/ethereum",
+  "/blockchain",
+  "/submit-topic",
+  "/contact-us",
+];
+
+function isInkPath(pathname) {
+  if (pathname === "/news") return true;
+  return INK_PREFIXES.some(
+    (path) => pathname === path || pathname.startsWith(`${path}/`)
+  );
+}
 
 function Header() {
+  const pathname = usePathname();
+  const ink = isInkPath(pathname);
+
+  useEffect(() => {
+    document.body.classList.toggle("page-ink", ink);
+    return () => document.body.classList.remove("page-ink");
+  }, [ink]);
+
   return (
-    <header>
-      <div className="_container">
-        <div className="head-wrap">
-          <Link href="/">
-            <img alt="logo" src="/logo.svg" />
-          </Link>
+    <header className={`site-header${ink ? " site-header--ink" : ""}`}>
+      <div className="site-header__inner">
+        <Link href="/" className="site-header__logo">
+          <img
+            src={
+              ink
+                ? "/images/redesign/logo-header-light.svg"
+                : "/images/redesign/logo-header.svg"
+            }
+            alt="Enlight News"
+            width={107}
+            height={32}
+          />
+        </Link>
 
-          <nav className="categories">
-            <Link href="/news">All news</Link>
-            <Link href="/trending">Trending</Link>
-            <Link href="/bitcoin">Bitcoin</Link>
-            <Link href="/ethereum">Ethereum</Link>
-            <Link href="/blockchain">Blockchain</Link>
-          </nav>
-
-          <nav>
-            <Link href="/about-us">About us</Link>
-            <Link href="/submit-topic">Submit topic</Link>
-            <Link href="/contact-us">Contact Us</Link>
-          </nav>
-
-          <MobileMenu />
+        <div className="site-header__actions">
+          <HeaderNav />
+          <SiteMenu ink={ink} />
         </div>
       </div>
     </header>

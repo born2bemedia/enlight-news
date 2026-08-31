@@ -10,6 +10,8 @@ function PostCard({ postObject }) {
           <Image
             src={postObject.image}
             fill={true}
+            quality={100}
+            unoptimized
             placeholder="blur"
             className="image-back"
             style={{ objectFit: "cover" }}

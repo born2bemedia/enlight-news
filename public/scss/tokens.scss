@@ -1,0 +1,103 @@
+// Design tokens for the 2026 redesign (Figma: Enlight / Page: Main)
+
+$c-light: #f0f0f7;
+$c-dark: #0f0f0f;
+$c-accent: #97d80f;
+$c-ink: #171717;
+$c-glow: #9ce500;
+
+$gutter: 40px;
+$gutter-mob: 20px;
+$layout-max: 1440px;
+
+$bp-lap: 1200px;
+$bp-tab: 992px;
+$bp-mob: 640px;
+
+@mixin container {
+  width: 100%;
+  max-width: $layout-max;
+  margin: 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @media (max-width: $bp-tab) {
+    padding-left: $gutter-mob;
+    padding-right: $gutter-mob;
+  }
+}
+
+// Type scale — names mirror the Figma text styles (h/60, p/16 …)
+@mixin h60 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 1;
+
+  @media (max-width: $bp-lap) {
+    font-size: 48px;
+  }
+  @media (max-width: $bp-tab) {
+    font-size: 32px;
+    line-height: 1.3;
+  }
+}
+
+@mixin h40 {
+  font-size: 40px;
+  font-weight: 600;
+  line-height: 1.1;
+
+  @media (max-width: $bp-tab) {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.3;
+  }
+}
+
+@mixin h32 {
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 1.3;
+
+  @media (max-width: $bp-tab) {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+}
+
+@mixin p24 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+@mixin p20 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin p18 {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin p16 {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin p14 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.4;
+}
+
+@mixin p12 {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.4;
+}

@@ -1,11 +1,11 @@
 import React from "react";
+import InkPageHead from "@/src/component/ui/InkPageHead";
+import VisionMission from "@/src/component/about/VisionMission";
+import SelectNews from "@/src/component/about/SelectNews";
+import SubscribeSection from "@/src/component/home/SubscribeSection";
+import "@/public/scss/news.scss";
+import "@/public/scss/home.scss";
 import "@/public/scss/about.scss";
-import AboutFirst from "./_components/AboutFirst";
-import AboutFourth from "./_components/AboutFourth";
-import AboutLast from "./_components/AboutLast";
-import AboutSecond from "./_components/AboutSecond";
-import AboutThird from "./_components/AboutThird";
-import SubscribeBlock from "@/src/component/SubscribeBlock";
 
 export const metadata = {
   title: "About us | Enlight News",
@@ -21,13 +21,18 @@ export const metadata = {
 
 function AboutUs() {
   return (
-    <>
-      <div className="dark">
-        <AboutFirst />
-        <AboutSecond />
-        <SubscribeBlock />
+    <div className="about-page">
+      <div className="about-page__intro">
+        <InkPageHead
+          tone="light"
+          title="About us"
+          description="Stay Enlightened. Your go-to source for all things crypto: news, marketing, and regulations."
+        />
       </div>
-    </>
+      <VisionMission />
+      <SelectNews />
+      <SubscribeSection />
+    </div>
   );
 }
 

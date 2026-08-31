@@ -1,21 +1,60 @@
-import Image from "next/image";
 import "@/public/scss/home.scss";
-import HomeFirst from "../component/home/HomeFirst";
-import CategoryPosts from "../component/CategoryPosts";
-import SubscribeBlock from "../component/SubscribeBlock";
-import HomeSubmit from "../component/home/HomeSubmit";
+import Hero from "../component/home/Hero";
+import SubscribeSection from "../component/home/SubscribeSection";
+import MarketView from "../component/home/MarketView";
+import NewsSection from "../component/home/NewsSection";
+import SubmitTopicSection from "../component/home/SubmitTopicSection";
+import AttentionSection from "../component/home/AttentionSection";
+import AllNewsSection from "../component/home/AllNewsSection";
+
+const CHARTS = {
+  bitcoin: {
+    title: "Bitcoin Dynamics",
+    src: "/images/redesign/chart-bitcoin-dynamics.png",
+    width: 428,
+    height: 243,
+  },
+  ethereum: {
+    title: "Ethereum Dynamics",
+    src: "/images/redesign/chart-ethereum-dynamics.png",
+    width: 442,
+    height: 242,
+  },
+  blockchain: {
+    title: "Total Number of Transactions",
+    src: "/images/redesign/chart-total-transactions.png",
+    width: 1144,
+    height: 702,
+  },
+};
 
 export default function Home() {
   return (
     <>
-      <HomeFirst />
-      <CategoryPosts categoryTitle="Trending" category="Trending" />
-      <SubscribeBlock />
-      <CategoryPosts categoryTitle="Bitcoin" category="Bitcoin" />
-      <CategoryPosts categoryTitle="Ethereum" category="Ethereum" />
-      <HomeSubmit />
-      <CategoryPosts categoryTitle="Blockchain" category="Blockchain" />
-      <CategoryPosts categoryTitle="All news" category="all" />
+      <Hero />
+      <SubscribeSection />
+      <MarketView />
+      <NewsSection
+        title="Bitcoin"
+        category="Bitcoin"
+        viewAllHref="/bitcoin"
+        chart={CHARTS.bitcoin}
+      />
+      <NewsSection
+        title="Ethereum"
+        category="Ethereum"
+        viewAllHref="/ethereum"
+        chart={CHARTS.ethereum}
+      />
+      <SubmitTopicSection />
+      <NewsSection
+        title="Blockchain"
+        category="Blockchain"
+        viewAllHref="/blockchain"
+        chart={CHARTS.blockchain}
+      />
+      <AttentionSection />
+      <AllNewsSection />
     </>
   );
 }

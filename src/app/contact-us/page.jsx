@@ -1,6 +1,9 @@
 import React from "react";
+import ContactSection from "@/src/component/contact/ContactSection";
+import SubscribeSection from "@/src/component/home/SubscribeSection";
+import "@/public/scss/news.scss";
+import "@/public/scss/home.scss";
 import "@/public/scss/contacts.scss";
-import ContactBlock from "./_components/ContactBlock";
 
 export const metadata = {
   title: "Contact us | Enlight News",
@@ -14,14 +17,12 @@ export const metadata = {
   },
 };
 
-
 function ContactsPage() {
   return (
-    <>
-      <div className="dark">
-        <ContactBlock />
-      </div>
-    </>
+    <div className="ink-page">
+      <ContactSection />
+      <SubscribeSection />
+    </div>
   );
 }
 
