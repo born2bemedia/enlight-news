@@ -4,7 +4,11 @@ import Image from "next/image";
 import ReadMore from "./ReadMore";
 import { BLUR_DATA_URL, IMAGE_QUALITY } from "./imagePlaceholder";
 
-function InfoCard({ post, withExcerpt = false }) {
+function InfoCard({
+  post,
+  withExcerpt = false,
+  sizes = "(max-width: 640px) 100vw, (max-width: 992px) 50vw, 33vw",
+}) {
   return (
     <Link href={`/news/${post.slug}`} className="info-card">
       <div className="info-card__thumb">
@@ -13,7 +17,7 @@ function InfoCard({ post, withExcerpt = false }) {
             src={post.image}
             alt=""
             fill
-            sizes="(max-width: 640px) 100vw, (max-width: 992px) 50vw, 33vw"
+            sizes={sizes}
             quality={IMAGE_QUALITY}
             unoptimized
             placeholder="blur"

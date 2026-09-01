@@ -4,9 +4,9 @@ import SectionHead from "../ui/SectionHead";
 import InfoCard from "../ui/InfoCard";
 
 async function RelatedNews({ category, excludeSlug }) {
-  const posts = (await getPosts("", 6, category || "", 0))
+  const posts = (await getPosts("", 8, category || "", 0))
     .filter((post) => post.slug !== excludeSlug)
-    .slice(0, 3);
+    .slice(0, 4);
 
   if (posts.length === 0) return null;
 
@@ -14,9 +14,14 @@ async function RelatedNews({ category, excludeSlug }) {
     <section className="news-section">
       <div className="news-section__inner">
         <SectionHead title="Related news" />
-        <div className="attention-feed">
+        <div className="related-feed">
           {posts.map((post) => (
-            <InfoCard key={post.slug} post={post} withExcerpt />
+            <InfoCard
+              key={post.slug}
+              post={post}
+              withExcerpt
+              sizes="(max-width: 640px) 100vw, (max-width: 1200px) 50vw, 25vw"
+            />
           ))}
         </div>
       </div>

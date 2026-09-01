@@ -281,6 +281,27 @@
   }
 }
 
+.related-feed {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+
+  @media (max-width: $bp-lap) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  @media (max-width: $bp-mob) {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .info-card__thumb {
+    height: 220px;
+
+    @media (max-width: $bp-lap) {
+      height: 200px;
+    }
+  }
+}
+
 /* ---------------------------------------------------------------- split CTA */
 
 .article-cta {
@@ -341,7 +362,7 @@
 }
 
 .article-cta__panel--assist {
-  background: $c-accent;
+  background: mix($c-accent, $c-dark, 78%);
 
   .article-cta__title {
     color: $c-dark;

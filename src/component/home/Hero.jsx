@@ -17,18 +17,20 @@ async function Hero() {
       <div className="hero__inner">
         <Link href={`/news/${featured.slug}`} className="hero__feature">
           {featured.image && (
-            <Image
-              src={featured.image}
-              alt=""
-              fill
-              priority
-              sizes="(max-width: 992px) 100vw, 70vw"
-              quality={IMAGE_QUALITY}
-              unoptimized
-              placeholder="blur"
-              blurDataURL={BLUR_DATA_URL}
-              style={{ objectFit: "cover" }}
-            />
+            <div className="hero__feature-media" aria-hidden>
+              <Image
+                src={featured.image}
+                alt=""
+                fill
+                priority
+                sizes="(max-width: 992px) 100vw, 70vw"
+                quality={IMAGE_QUALITY}
+                unoptimized
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
+                style={{ objectFit: "cover" }}
+              />
+            </div>
           )}
           <div className="hero__feature-body">
             <h1 className="hero__feature-title">{featured.title}</h1>
