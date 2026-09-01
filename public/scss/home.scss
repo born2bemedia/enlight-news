@@ -491,14 +491,8 @@
 .market-view {
   position: relative;
   overflow: hidden;
-  height: 604px;
-  padding-top: 60px;
+  padding: 60px 0 40px;
   background: $c-ink;
-
-  @media (max-width: $bp-tab) {
-    height: auto;
-    padding-bottom: 40px;
-  }
 
   &__glow {
     position: absolute;
@@ -538,23 +532,36 @@
 
   &__panel {
     display: flex;
-    justify-content: center;
-    padding: 40px 41px;
+    flex-direction: column;
+    width: 100%;
+    padding: 24px;
     border-radius: 4px;
     background: $c-dark;
     overflow: hidden;
 
     @media (max-width: $bp-tab) {
-      width: 100%;
       padding: 10px;
     }
+  }
 
-    img {
-      display: block;
-      width: 995px;
-      height: auto;
-      max-width: 100%;
+  &__credit {
+    @include p12;
+    margin: 12px 0 0;
+    color: rgba($c-light, 0.5);
+
+    a {
+      color: $c-accent;
     }
+  }
+}
+
+.tradingview-widget-container {
+  width: 100%;
+  min-height: 550px;
+
+  &__widget {
+    width: 100%;
+    height: 550px;
   }
 }
 
@@ -664,8 +671,8 @@
 .chart-card {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
   gap: 16px;
   padding: 40px 41px;
   border-radius: 4px;
@@ -684,12 +691,148 @@
   }
 
   &__image {
+    display: flex;
+    flex: 1 1 auto;
     width: 100%;
+    min-height: 200px;
 
     img {
       display: block;
       width: 100%;
       height: auto;
+    }
+  }
+}
+
+.coin-price-widget {
+  display: flex;
+  width: 100%;
+  min-height: 200px;
+  flex: 1 1 auto;
+
+  cs-coin-price {
+    display: block;
+    width: 100%;
+    min-height: 200px;
+    flex: 1 1 auto;
+  }
+}
+
+.tx-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  border-radius: 4px;
+  background: #1c1b1b;
+  color: $c-light;
+
+  &--compact {
+    padding: 0;
+    background: transparent;
+    gap: 10px;
+  }
+
+  &__head {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+
+    h3 {
+      @include p16;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    p {
+      @include p12;
+      margin: 0;
+      opacity: 0.55;
+    }
+  }
+
+  &__ranges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+  }
+
+  &__ranges button {
+    height: 28px;
+    padding: 0 10px;
+    border: 1px solid rgba($c-light, 0.12);
+    border-radius: 2px;
+    background: transparent;
+    font-family: inherit;
+    font-size: 12px;
+    line-height: 1;
+    color: rgba($c-light, 0.7);
+    cursor: pointer;
+
+    &.is-active {
+      background: rgba($c-light, 0.12);
+      color: $c-light;
+    }
+  }
+
+  &__legend {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 14px;
+    font-size: 12px;
+    color: rgba($c-light, 0.7);
+  }
+
+  &__swatch {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+
+    &--price {
+      background: $c-light;
+    }
+
+    &--tx {
+      background: $c-accent;
+    }
+  }
+
+  &__svg {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  &__grid {
+    stroke: rgba($c-light, 0.08);
+    stroke-width: 1;
+  }
+
+  &__tick {
+    fill: rgba($c-light, 0.45);
+    font-size: 10px;
+    font-family: inherit;
+
+    &--end {
+      text-anchor: end;
+    }
+  }
+
+  &__line {
+    fill: none;
+    stroke-width: 1.6;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+
+    &--price {
+      stroke: $c-light;
+    }
+
+    &--tx {
+      stroke: $c-accent;
     }
   }
 }

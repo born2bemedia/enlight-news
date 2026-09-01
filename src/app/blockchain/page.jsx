@@ -33,8 +33,7 @@ async function BlockchainPage({ searchParams }) {
       moreLabel="More blockchain news"
       withExcerpt={false}
       chart={{
-        src: "/images/redesign/chart-total-transactions.png",
-        alt: "Total Number of Transactions",
+        widget: "transactions",
       }}
       chartSize="lg"
     />

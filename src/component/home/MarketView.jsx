@@ -1,6 +1,5 @@
 import React from "react";
-import Image from "next/image";
-import { IMAGE_QUALITY } from "../ui/imagePlaceholder";
+import TradingViewWidget from "./TradingViewWidget";
 
 function MarketView() {
   return (
@@ -11,14 +10,17 @@ function MarketView() {
       <div className="market-view__inner">
         <h2 className="market-view__title">Cryptocurrency Market View</h2>
         <div className="market-view__panel">
-          <Image
-            src="/images/redesign/chart-market-overview.png"
-            alt="Cryptocurrency market overview chart"
-            width={995}
-            height={637}
-            quality={IMAGE_QUALITY}
-            sizes="(max-width: 992px) 100vw, 995px"
-          />
+          <TradingViewWidget />
+          <p className="market-view__credit">
+            <a
+              href="https://www.tradingview.com/markets/cryptocurrencies/prices-all/"
+              rel="noopener nofollow"
+              target="_blank"
+            >
+              Crypto markets
+            </a>{" "}
+            by TradingView
+          </p>
         </div>
       </div>
     </section>

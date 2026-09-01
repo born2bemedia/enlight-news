@@ -1,10 +1,9 @@
 import React from "react";
-import Image from "next/image";
-import { IMAGE_QUALITY } from "../ui/imagePlaceholder";
 import { getPosts } from "@/src/utils/blogUtils";
 import SectionHead from "../ui/SectionHead";
 import FeatureArticle from "../ui/FeatureArticle";
 import InfoCard from "../ui/InfoCard";
+import ChartMedia from "../ui/ChartMedia";
 
 async function NewsSection({ title, category, viewAllHref, chart }) {
   const posts = await getPosts("", 4, category, 0);
@@ -27,14 +26,7 @@ async function NewsSection({ title, category, viewAllHref, chart }) {
             <div className="news-feed__chart chart-card">
               <h3 className="chart-card__title">{chart.title}</h3>
               <div className="chart-card__image">
-                <Image
-                  src={chart.src}
-                  alt={chart.title}
-                  width={chart.width}
-                  height={chart.height}
-                  quality={IMAGE_QUALITY}
-                  sizes="(max-width: 992px) 100vw, 33vw"
-                />
+                <ChartMedia chart={chart} />
               </div>
             </div>
           )}

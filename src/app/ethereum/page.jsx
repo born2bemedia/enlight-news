@@ -33,8 +33,9 @@ async function EthereumPage({ searchParams }) {
       moreLabel="More Ethereum news"
       withExcerpt={false}
       chart={{
-        src: "/images/redesign/chart-ethereum-dynamics.png",
-        alt: "Ethereum Dynamics",
+        widget: "ethereum",
+        width: "352",
+        height: "200",
       }}
     />
   );

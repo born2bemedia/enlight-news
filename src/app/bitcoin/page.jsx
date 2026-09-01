@@ -33,8 +33,9 @@ async function BitcoinPage({ searchParams }) {
       moreLabel="More Bitcoin news"
       withExcerpt={false}
       chart={{
-        src: "/images/redesign/chart-bitcoin-dynamics.png",
-        alt: "Bitcoin Dynamics",
+        widget: "bitcoin",
+        width: "352",
+        height: "200",
       }}
     />
   );

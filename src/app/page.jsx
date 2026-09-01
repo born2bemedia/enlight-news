@@ -10,21 +10,18 @@ import AllNewsSection from "../component/home/AllNewsSection";
 const CHARTS = {
   bitcoin: {
     title: "Bitcoin Dynamics",
-    src: "/images/redesign/chart-bitcoin-dynamics.png",
-    width: 428,
-    height: 243,
+    widget: "bitcoin",
+    width: "100%",
   },
   ethereum: {
     title: "Ethereum Dynamics",
-    src: "/images/redesign/chart-ethereum-dynamics.png",
-    width: 442,
-    height: 242,
+    widget: "ethereum",
+    width: "100%",
   },
   blockchain: {
     title: "Total Number of Transactions",
-    src: "/images/redesign/chart-total-transactions.png",
-    width: 1144,
-    height: 702,
+    widget: "transactions",
+    compact: true,
   },
 };
 

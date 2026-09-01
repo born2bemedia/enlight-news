@@ -1,4 +1,5 @@
 import React from "react";
+import ChartMedia from "./ChartMedia";
 
 function InkPageHead({
   title,
@@ -7,6 +8,15 @@ function InkPageHead({
   chartSize = "sm",
   tone = "ink",
 }) {
+  const chartClass = [
+    "ink-page-head__chart",
+    `ink-page-head__chart--${chartSize}`,
+    chart?.widget && "ink-page-head__chart--widget",
+    chart?.widget === "transactions" && "ink-page-head__chart--tx",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
     <header
       className={`ink-page-head${tone === "light" ? " ink-page-head--light" : ""}`}
@@ -21,8 +31,8 @@ function InkPageHead({
           )}
         </div>
         {chart && (
-          <div className={`ink-page-head__chart ink-page-head__chart--${chartSize}`}>
-            <img src={chart.src} alt={chart.alt || chart.title || ""} />
+          <div className={chartClass}>
+            <ChartMedia chart={chart} />
           </div>
         )}
       </div>
