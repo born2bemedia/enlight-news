@@ -1,8 +1,8 @@
 ---
 title: "Deribit and SignalPlus Launch $600,000 Trading Competition to Boost Community Engagement"
 excerpt: "Deribit and SignalPlus launch The Island, a 35-day trading competition with a prize pool of up to 600,000 USDC to drive community engagement."
-date: "2026-06-05 12:00:00"
-format_date: "June 5, 2026"
+date: "2026-10-13 12:00:00"
+format_date: "October 13, 2026"
 image: "deribit-signalplus-trading-competition.png"
 seo_title: "Deribit and SignalPlus Launch $600,000 Trading Competition | Enlight News"
 seo_description: "Deribit and SignalPlus launch a $600,000 trading competition. See what gamified community campaigns mean for crypto marketing and growth."

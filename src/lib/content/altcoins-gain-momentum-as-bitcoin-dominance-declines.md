@@ -1,8 +1,8 @@
 ---
 title: "Altcoins Gain Momentum as Bitcoin Dominance Declines"
 excerpt: "Bitcoin's market share falls to a one-month low as investors rotate capital into altcoins with revenue models, active ecosystems, and institutional interest."
-date: "2026-06-27 12:00:00"
-format_date: "June 27, 2026"
+date: "2026-10-15 12:00:00"
+format_date: "October 15, 2026"
 image: "altcoins-gain-momentum-bitcoin-dominance.png"
 seo_title: "Altcoins Gain Momentum as Bitcoin Dominance Declines | Enlight News"
 seo_description: "Bitcoin dominance falls as capital rotates into selected altcoins. See what this means for crypto projects, marketing, and sustainable growth."
