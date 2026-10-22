@@ -11,6 +11,7 @@ categories:
   - Ethereum
   - Trending
 label: "Layer 2"
+draft: true
 ---
 
 Sophon has set November 25 as the deadline for users to withdraw assets from its blockchain, five days before the network's planned final shutdown on November 30. The decision completes a strategic shift announced in June: instead of operating its own Ethereum Layer 2 network, the company will focus on consumer finance and AI applications built on Base. The project says assets left on Sophon Chain after the withdrawal deadline could become permanently inaccessible.
