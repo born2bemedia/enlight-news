@@ -42,6 +42,9 @@ async function getLocalPosts() {
         if (!data.date) return null;
 
         const slug = file.slice(0, -".md".length);
+        // Drafts stay hidden everywhere, including any WordPress post with the same slug
+        if (data.draft) return { slug, draft: true };
+
         return {
           slug,
           title: data.title,
@@ -93,7 +96,8 @@ async function getMergedPosts(category = "") {
     });
   }
   for (const post of localPosts) {
-    bySlug.set(post.slug, post);
+    if (post.draft) bySlug.delete(post.slug);
+    else bySlug.set(post.slug, post);
   }
 
   let posts = Array.from(bySlug.values()).sort(
