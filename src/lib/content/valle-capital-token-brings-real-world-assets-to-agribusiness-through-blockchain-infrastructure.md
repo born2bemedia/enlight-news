@@ -1,8 +1,8 @@
 ---
 title: "Valle Capital Token Brings Real-World Assets to Agribusiness Through Blockchain Infrastructure"
 excerpt: "Valle Capital Token launches a BNB Smart Chain ecosystem that connects digital finance with Brazil's agribusiness and commodity export sector."
-date: "2026-10-14 12:00:00"
-format_date: "October 14, 2026"
+date: "2026-10-25 12:00:00"
+format_date: "October 25, 2026"
 image: "valle-capital-token-agribusiness-rwa.png"
 seo_title: "Valle Capital Token Brings RWAs to Agribusiness | Enlight News"
 seo_description: "Valle Capital Token launches a blockchain ecosystem for agribusiness. See what RWA tokenization means for crypto projects and enterprise growth."
