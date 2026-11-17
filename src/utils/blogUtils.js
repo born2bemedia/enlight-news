@@ -3,7 +3,7 @@ import path from "node:path";
 import matter from "gray-matter";
 import { marked } from "marked";
 
-const apiUrl = process.env.NEXT_PUBLIC_WORDPRESS_API_URL;
+// All articles live as Markdown files here (the old WordPress posts were moved in too)
 const CONTENT_DIR = path.join(process.cwd(), "src/lib/content");
 
 marked.setOptions({ gfm: true });
@@ -12,15 +12,6 @@ function resolveLocalImage(image) {
   if (!image) return image;
   if (image.startsWith("http") || image.startsWith("/")) return image;
   return `/images/resources/${image}`;
-}
-
-// Next.js image optimizer 500s on CMS webp; Figma heroes are stored locally.
-function resolveCmsImage(image) {
-  if (!image || typeof image !== "string") return image;
-  const match = image.match(/News-?(\d+)\.(?:webp|png|jpe?g)$/i);
-  if (!match) return image;
-  const n = String(match[1]).padStart(2, "0");
-  return `/images/news/news-${n}.png`;
 }
 
 async function getLocalPosts() {
@@ -38,12 +29,12 @@ async function getLocalPosts() {
         const text = await readFile(path.join(CONTENT_DIR, file), "utf8");
         const { content, data } = matter(text);
 
-        // Legacy MD without date is ignored (WordPress is the source for those)
+        // Files without a date are not published
         if (!data.date) return null;
 
         const slug = file.slice(0, -".md".length);
-        // Drafts stay hidden everywhere, including any WordPress post with the same slug
-        if (data.draft) return { slug, draft: true };
+        // Drafts stay hidden everywhere
+        if (data.draft) return null;
 
         return {
           slug,
@@ -64,43 +55,8 @@ async function getLocalPosts() {
   return posts.filter(Boolean);
 }
 
-async function getWpPosts() {
-  if (!apiUrl) return [];
-
-  try {
-    const response = await fetch(`${apiUrl}/posts`, {
-      next: {
-        tags: ["blog"],
-        revalidate: 200,
-      },
-    });
-    if (!response.ok) return [];
-    const data = await response.json();
-    return Array.isArray(data) ? data : [];
-  } catch {
-    return [];
-  }
-}
-
 async function getMergedPosts(category = "") {
-  const [wpPosts, localPosts] = await Promise.all([
-    getWpPosts(),
-    getLocalPosts(),
-  ]);
-
-  const bySlug = new Map();
-  for (const post of wpPosts) {
-    bySlug.set(post.slug, {
-      ...post,
-      image: resolveCmsImage(post.image),
-    });
-  }
-  for (const post of localPosts) {
-    if (post.draft) bySlug.delete(post.slug);
-    else bySlug.set(post.slug, post);
-  }
-
-  let posts = Array.from(bySlug.values()).sort(
+  let posts = (await getLocalPosts()).sort(
     (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
   );
 
