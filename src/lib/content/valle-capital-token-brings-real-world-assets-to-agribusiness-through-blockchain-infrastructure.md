@@ -10,7 +10,6 @@ categories:
   - Blockchain
   - Trending
 label: "Real-World Assets"
-draft: true
 ---
 
 ## Valle Capital Token Introduces Blockchain Ecosystem for Agribusiness
